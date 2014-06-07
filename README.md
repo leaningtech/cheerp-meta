@@ -1,4 +1,4 @@
-duetto-wiki
+cheerp-wiki
 ===========
 
-A pseudo project to store the wiki for the duetto project
+A pseudo project to store the wiki for the cheerp project
