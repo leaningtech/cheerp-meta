@@ -1,4 +1,4 @@
-cheerp-wiki
+cheerp-meta
 ===========
 
-A pseudo project to store the wiki for the cheerp project
+A pseudo project to store the wiki and the issue tracker for Cheerp
