@@ -2,7 +2,7 @@
 
 # Cheerp - a C/C++ compiler for Web applications
 
-[![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://badges.gitter.im/leaningtech/cheerp)
+[![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code (up to C++14) to WebAssembly, JavaScript, asm.js or a combination thereof.
