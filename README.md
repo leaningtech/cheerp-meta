@@ -8,6 +8,7 @@
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code (up to C++14) to WebAssembly, JavaScript, asm.js or a combination thereof.
 
 Main documentation link: https://github.com/leaningtech/cheerp-meta/wiki
+
 Main project link: https://leaningtech.com/cheerp/
 
 This repository is the main reference for documentation, issue tracking, and release notes. Please contribute to Cheerp!
