@@ -44,6 +44,8 @@ Alternatively, you can build Cheerp from source. Please follow the instructions 
 
 To get started, you can have a look at our simple tutorial to build your first JavaScript [Hello World](https://github.com/leaningtech/cheerp-meta/wiki/Cheerp-Tutorial), or your first WebAssembly [program](https://github.com/leaningtech/cheerp-meta/wiki/WebAssembly-output-(wasm-or-wast-mode)).
 
+For a more in-depth tutorial, please visit this tutorial: [a game of Pong in WebAssembly](https://github.com/leaningtech/cheerp-meta/wiki/Cheerp-Tutorial:-Mixed-mode-C---to-WebAssembly-and-JavaScript).
+
 Bugs and Questions
 ------
 
