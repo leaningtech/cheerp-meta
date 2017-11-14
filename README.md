@@ -33,7 +33,7 @@ Cheerp enables C/C++ code to be compiled to WebAssembly, JavaScript, asm.js or a
 2. Allows to compile a single code base into a combination of WebAssembly and JavaScript by (optionally) tagging portions of the code with ```[[cheerp::genericjs]]``` and ```[[cheerp::wasm]]```.
 3. Can generate code 30-90% smaller than Emscripten, with faster startup.
 
-Cheerp is open-source software and is free for non-commercial uses. Paid support and consulting packages are available for commercial users. 
+Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyleft commercial licenses, commercial support and consulting packages are available from Leaning Technologies.
 
 Getting Started
 ------
