@@ -35,6 +35,8 @@ Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyle
 
 Getting Started
 ------
+You can try Cheerp without installation thanks to this [Cheerp playground](https://cheerp.cppse.nl) by [Ray Burgemeestre](https://github.com/rayburgemeestre).
+
 You can download the latest official release of Cheerp for Windows, Linux and macOS a this address:
 https://leaningtech.com/cheerp/download/. Installation instructions are available [here](https://github.com/leaningtech/cheerp-meta/wiki#buildinstallation).
 
