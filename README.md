@@ -16,12 +16,14 @@ Main project link: https://leaningtech.com/cheerp/
 
 This repository is the main reference for documentation, issue tracking, and release notes.
 
-What is Cheerp?
-------
+What is Cheerp
+-----
 
-Cheerp is a C/C++ compiler for the Web, based and integrated into the LLVM/clang infrastructure, and featuring numerous custom optimisation steps to maximise performance and minimise size of the compiled JavaScript/WebAssembly output. As such, Cheerp is the best performing, most optimised C++ to WebAssembly compiler available on the market.
+Cheerp is a C/C++ compiler for the Web, based and integrated into the LLVM/clang infrastructure, and featuring numerous custom optimisation steps to maximise performance and minimise size of the compiled JavaScript/WebAssembly output. As such, Cheerp is the best performing, most optimised C++ to WebAssembly compiler available on the market
 
 Cheerp is used mainly to port existing C/C++ libraries and applications to HTML5, but can also be used to write high-performance Web applications and components from scratch. C/C++ gets optimised and compiled into JavaScript/WebAssembly, and can easily be deployed as part of a web page.
+
+![Diagram of Cheep usage](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-meta/Diagram_browser.png "Icons from https://github.com/ubuntu/yaru/tree/master/icons, Creative Commons BY-SA 4.0")
 
 What is unique about Cheerp?
 ------
@@ -33,18 +35,17 @@ Cheerp enables C/C++ code to be compiled to WebAssembly, JavaScript, asm.js or a
 
 Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyleft commercial licenses, commercial support and consulting packages are available from Leaning Technologies.
 
-Getting Started
+Get started
 ------
-You can try Cheerp without installation thanks to this [Cheerp playground](https://cheerp.cppse.nl) by [Ray Burgemeestre](https://github.com/rayburgemeestre).
 
-You can download the latest official release of Cheerp for Windows, Linux and macOS a this address:
-https://leaningtech.com/cheerp/download/. Installation instructions are available [here](https://github.com/leaningtech/cheerp-meta/wiki#buildinstallation).
+First time user? We recommend following the [Getting started](Getting-started) page, that will guide though this steps:
++ [Install](Getting-started#install "Install")
++ [Cheerp basics](Getting-started#cheerp-basics "Cheerp basics")
++ [Ready?](Getting-started#ready "Ready?")
++ [Hello, World!](Getting-started#hello-world "Hello, World!")
++ [Tutorials](Getting-started#tutorials "Tutorials")
 
-Alternatively, you can build Cheerp from source. Please follow the instructions available [here](https://github.com/leaningtech/cheerp-meta/wiki#buildinstallation).
-
-To get started, you can have a look at our simple tutorial to build your first JavaScript [Hello World](https://github.com/leaningtech/cheerp-meta/wiki/Cheerp-Tutorial), or your first WebAssembly [program](https://github.com/leaningtech/cheerp-meta/wiki/WebAssembly-output-(wasm-or-wast-mode)).
-
-For a more in-depth tutorial, please visit this tutorial: [a game of Pong in WebAssembly](https://github.com/leaningtech/cheerp-meta/wiki/Cheerp-Tutorial:-Mixed-mode-C---to-WebAssembly-and-JavaScript).
+Or look at the sidebar to find lots of useful materials
 
 Bugs and Questions
 ------
