@@ -4,11 +4,11 @@
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
-[![Latest version](https://img.shields.io/badge/cheerp-2.0-brightgreen.svg)](https://leaningtech.com/pages/cheerp.html#Install)  [![Latest version changelog](https://img.shields.io/badge/cheerp2.0-changelog-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
+[![Latest version](https://img.shields.io/badge/cheerp-2.5rc1-brightgreen.svg)](https://leaningtech.com/pages/cheerp.html#Install)  [![Latest version changelog](https://img.shields.io/badge/2.5rc1-changelog-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code (up to C++14) to WebAssembly, JavaScript, asm.js or a combination thereof.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.0-brightgreen.svg)](https://leaningtech.com/cheerp/download/)  [![Latest version changelog](https://img.shields.io/badge/cheerp2.0-changelog-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
+Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.5rc1-brightgreen.svg)](https://leaningtech.com/cheerp/download/)  [![Latest version changelog](https://img.shields.io/badge/2.5rc1-changelog-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
 
 Main documentation link: https://github.com/leaningtech/cheerp-meta/wiki
 
@@ -29,9 +29,9 @@ What is unique about Cheerp?
 ------
 
 Cheerp enables C/C++ code to be compiled to WebAssembly, JavaScript, asm.js or a combination thereof. Compared to alternative C/C++ compilers for web applications such as Emscripten, Cheerp:
-1. Generates up to 30% faster (7% on average) WebAssembly code, but can also compile to a JavaScript output with dynamic memory (garbage-collectible output), zero-overhead DOM manipulation and access to WebApis and superior C++-JavaScript interoperability.
+1. Generates 6% faster (on average) WebAssembly code, but can also compile to a JavaScript output with dynamic memory (garbage-collectible output), zero-overhead DOM manipulation and access to WebApis and superior C++-JavaScript interoperability.
 2. Allows to compile a single code base into a combination of WebAssembly and JavaScript by (optionally) tagging portions of the code with ```[[cheerp::genericjs]]``` and ```[[cheerp::wasm]]```.
-3. Can generate code up to 20% smaller than Emscripten.
+3. Can generate code on average 11% smaller than Emscripten (8% post compression).
 
 Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyleft commercial licenses, commercial support and consulting packages are available from Leaning Technologies.
 
