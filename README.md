@@ -4,15 +4,13 @@
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
-[![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/pages/cheerp.html#Install)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
+[![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code (up to C++17) to WebAssembly, JavaScript, asm.js or a combination thereof.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/download/)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
+Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
 
-Main documentation link: https://github.com/leaningtech/cheerp-meta/wiki
-
-Main project link: https://leaningtech.com/pages/cheerp.html
+Main project link: https://leaningtech.com/cheerp/
 
 This repository is the main reference for documentation, issue tracking, and release notes.
 
@@ -23,7 +21,7 @@ Cheerp is a C/C++ compiler for the Web, based and integrated into the LLVM/clang
 
 Cheerp is used primarily to port existing C/C++ libraries and applications to HTML5, but can also be used to write high-performance Web applications and WebAssembly components from scratch. C/C++ gets optimised and compiled into JavaScript/WebAssembly, and can easily be integrated in a web page.
 
-![Diagram of Cheep usage](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-meta/Diagram_browser.png "Icons from https://github.com/ubuntu/yaru/tree/master/icons, Creative Commons BY-SA 4.0")
+![Diagram of Cheep usage](assets/Diagram_browser.png "Icons from https://github.com/ubuntu/yaru/tree/master/icons, Creative Commons BY-SA 4.0")
 
 What is unique about Cheerp?
 ------
@@ -39,12 +37,12 @@ Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyle
 Get started
 ------
 
-First time user? We recommend following the [Getting started](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started) page, that will guide though this steps:
-+ [Install](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started#install "Install")
-+ [Cheerp basics](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started#cheerp-basics "Cheerp basics")
-+ [Ready?](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started#ready "Ready?")
-+ [Hello, World!](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started#hello-world "Hello, World!")
-+ [Tutorials](https://github.com/leaningtech/cheerp-meta/wiki/Getting-started#tutorials "Tutorials")
+First time user? We recommend following the [Getting started](pages/Getting-started.md) page, that will guide though this steps:
++ [Install](pages/Getting-started.md#install "Install")
++ [Cheerp basics](pages/Getting-started.md#cheerp-basics "Cheerp basics")
++ [Ready?](pages/Getting-started.md#ready "Ready?")
++ [Hello, World!](pages/Getting-started.md#hello-world "Hello, World!")
++ [Tutorials](pages/Getting-started.md#tutorials "Tutorials")
 
 Or look at the sidebar to find lots of useful materials
 
@@ -52,8 +50,3 @@ Bugs and Questions
 ------
 
 You can get in touch with us using our [Gitter chat](https://gitter.im/leaningtech/cheerp), or by filing a bug on our [Issue tracker](https://github.com/leaningtech/cheerp-meta/issues).
-
-Documentation
------
-
-Documentation is available at https://github.com/leaningtech/cheerp-meta/wiki.
