@@ -1,3 +1,7 @@
+---
+title: RHEL8 and CentOS installation
+--- 
+
 We provide pre-built RPM packages for RHEL8 (and CentOS 8).
 
 # Packages

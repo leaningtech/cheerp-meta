@@ -1,3 +1,7 @@
+---
+title: JavaScript interoperability
+---
+
 Cheerp implements three advanced interoperability mechanisms to interface C++ code with pure JavaScript:
 
 * Expose C++ classes and methods to JavaScript code

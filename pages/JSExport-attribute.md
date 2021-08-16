@@ -1,3 +1,7 @@
+---
+title: JSExport attribute
+---
+
 ## Introduction
 
 The ```[[cheerp::jsexport]]``` attribute can be applied in C++ code either to free functions or to ```class``` and ```struct``` definitions.

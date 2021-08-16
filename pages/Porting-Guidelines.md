@@ -1,3 +1,7 @@
+---
+title: Porting guidelines
+---
+
 This document provides a brief guide to approach the porting of a C/C++ application to an HTML5 application using Cheerp. It also highlights some of the practical limitations introduced by the object-based memory model used by Cheerp in mapping C++ objects into JavaScripts objects
 
 # Background

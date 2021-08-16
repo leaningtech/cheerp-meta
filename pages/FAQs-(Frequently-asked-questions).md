@@ -1,3 +1,7 @@
+---
+title: Frequently Asked Questions
+---
+
 ## The size of cheerp output JavaScript code is very large. Is this normal? What can I do to reduce it?
 
 If you only use browser APIs in your code and no functions from the C or C++ library you can compile using the ```-nostdlib``` option. This will reduce the code size by not linking in initialization code for ```<iostream>``` functionalities. Please node that Cheerp already compiles only the code which is actually used, but currently the static initializations of ```std::cout``` and similar objects are seen as executed code.

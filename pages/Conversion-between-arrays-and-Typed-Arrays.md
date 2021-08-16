@@ -1,3 +1,7 @@
+---
+title: Conversion between arrays and Typed Arrays
+---
+
 In cheerp, C++ arrays of basic data types such as ```char```, ```unsigned char```, ```short```, ```unsigned short```, ```int```, ```unsigned int```, ```float``` and ```double``` are backed by JavaScript typed array of corresponding types.
 
 # From C++ data to Typed Array

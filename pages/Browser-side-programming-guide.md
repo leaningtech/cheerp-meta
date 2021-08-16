@@ -1,5 +1,9 @@
+---
+title: Tutorial - DOM & the Browser
+---
+
 # Input and output
-In the [first](Getting-started#hello-world) [two](Tutorial-Hello-Wasm) tutorials we used no input methods and only printing to the console as the output method.
+In the [first](Getting-started.md#hello-world) [two](Tutorial-Hello-Wasm.md) tutorials we used no input methods and only printing to the console as the output method.
 
 Now we will expore a more powerful interface: accessing and modifying the DOM.
 
@@ -23,7 +27,7 @@ using namespace client;
 
 ## The document object
 
-You can access the ```document``` global object directly from C++ code. In the next example we will add an event handler to run our code after the DOM is fully loaded. ([dom.cpp](tutorials/dom_access/dom.cpp))
+You can access the ```document``` global object directly from C++ code. In the next example we will add an event handler to run our code after the DOM is fully loaded. ([dom.cpp](/tutorials/dom_access/dom.cpp))
 
 ```c++
 #include <cheerp/client.h> //Misc client side stuff
@@ -59,7 +63,7 @@ void webMain()
 Compiling with:
 ```/opt/cheerp/bin/clang++ -target cheerp dom.cpp -o dom.js```
 
-Now we need a [html file](tutorials/dom_access/dom.html):
+Now we need a [html file](/tutorials/dom_access/dom.html):
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +89,7 @@ Bye from loadCallback!
 ```
 
 There are two important things to notice:
-+ the program outlived `webMain()` (while a normal C++ program terminates when the `main` returns) ([why?](Cheerp-basics#the-webmain-entry-point))
++ the program outlived `webMain()` (while a normal C++ program terminates when the `main` returns) ([why?](Cheerp-basics.md#the-webmain-entry-point))
 + running code directly from inside `webMain()` can lead to race conditions, where depending on the execution order we may perform invalid operations (since the DOM is not fully formed). The pattern of invoking a callback on `DOMContentLoaded` is very important and will be used also in all the following examples, and so it is the more general pattern of using `cheerp::Callback`, that we will now examinate.
 
 ## The ```cheerp::Callback``` adapter function
@@ -109,7 +113,7 @@ element->addEventListener("event_kind", cheerp::Callback(callback));
 
 cheerp::Callbacks are a very powerful instrument:
 * they can be attached to any pair of DOM element + [`client::Event`](https://developer.mozilla.org/en-US/docs/Web/Events) to capture mouse movements, clicks, change of focus, button clicks, keyboard buttons pressed, etc.
-* Callbacks can be attached also to `requestAnimationFrame` or `setTimeout`, see expecially [Pong](Cheerp-Tutorial%3A-Mixed-mode-C++-to-WebAssembly-and-JavaScript)
+* Callbacks can be attached also to `requestAnimationFrame` or `setTimeout`, see expecially [Pong](Cheerp-Tutorial-Mixed-mode-C++-to-WebAssembly-and-JavaScript.md)
 * Callback could be attached to `DOMContentLoaded` or equivalent events to do initializations (for example, of other callbacks)
 
 ## Manipulating the DOM
@@ -160,10 +164,10 @@ void setupInputAndDisplay()
 
 Now placing a call to `setupInputAndDisplay()` from inside `loadCallback()` will add the two elements to the body.
 
-(feel free to modify the previous `dom.cpp`. The `dom.html` file will remain the same, [link](tutorials/dom_manipulation/dom.cpp))
+(feel free to modify the previous `dom.cpp`. The `dom.html` file will remain the same, [link](/tutorials/dom_manipulation/dom.cpp))
 
 ## Even more `cheerp::Callback`: buttons & mouse
-[buttons.cpp](tutorials/dom_buttons/buttons.cpp) is an example of various uses for the `cheerp::Callback` to generate buttons, text elements, check mouse position, etc. Compile it to JavaScript, keep using the same `dom.html` as before, click on a few buttons.
+[buttons.cpp](/tutorials/dom_buttons/buttons.cpp) is an example of various uses for the `cheerp::Callback` to generate buttons, text elements, check mouse position, etc. Compile it to JavaScript, keep using the same `dom.html` as before, click on a few buttons.
 
 # Recap
 

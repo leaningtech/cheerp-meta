@@ -1,3 +1,7 @@
+---
+title: Ubuntu & Debian installation
+---
+
 Pre-built packages for Debian/Ubuntu are provided in our PPA
 
 https://launchpad.net/~leaningtech-dev/+archive/ubuntu/cheerp-ppa

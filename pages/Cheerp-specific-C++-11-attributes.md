@@ -1,3 +1,7 @@
+---
+title: Cheerp specific C++ attributes
+---
+
 C++11 introduces a standard syntax for custom attributes, which is ```[[attributename]]```. Cheerp takes advantage of a few custom attributes to provide special semantics otherwise not present in the C++ language.
 
 # ```[[noinit]]```

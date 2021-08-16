@@ -1,3 +1,7 @@
+---
+title: Tutorial - Hello, Wasm!
+---
+
 This tutorial will cover the basics of using Cheerp to compile a generic C++ source file to Javascript and Javascript+WebAssembly.
 
 We will show what Wasm is expecially good at: doing the computational heavy lifting.

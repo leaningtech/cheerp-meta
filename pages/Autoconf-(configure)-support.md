@@ -1,3 +1,7 @@
+---
+title: Autoconf support
+---
+
 Cheerp includes a wrapper script that sets up a proper environment to let autoconf-based (i.e. configure) build systems work with Cheerp. 
 
 Let's consider the common build instructions:

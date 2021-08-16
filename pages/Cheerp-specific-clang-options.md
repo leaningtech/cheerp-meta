@@ -1,3 +1,7 @@
+---
+title: Cheerp specific clang options
+---
+
   `-cheerp-asmjs-mem-file=<file>`       Write asm.js initialized memory to `<file>`
 
   `-cheerp-asmjs-symbolic-globals`      Compile global variable addresses as js variables in the asm.js module

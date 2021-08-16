@@ -1,3 +1,7 @@
+---
+title: WebGL Troubleshooting
+---
+
 ## Passing data to WebGL uniform* APIs
 
 ```uniform*``` APIs and, more in general, WebGL APIs which expects buffer requires typed arrays of a suitable type.

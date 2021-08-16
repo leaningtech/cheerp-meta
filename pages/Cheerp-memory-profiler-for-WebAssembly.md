@@ -1,4 +1,7 @@
-# Cheerp Memory Profiler
+---
+title: Cheerp Memory Profiler
+---
+
 Starting from Cheerp 2.0, [commercial users](https://leaningtech.com/pages/cheerp.html#Pricing) have access to the Cheerp Memory Profiler. This tool allows to monitor memory use in real-time, and profile memory to identify leaks or inefficiencies.
 
 The Cheerp memory profiler can be used from within the source code (e.g: to assert that there are no leaks inside a certain block) or from the browser console. We provide a visualisation tool that can be simply included in the HTML page hosting compiled code to get an overview of real-time memory consumption during the application lifetime. [Commercial Licence].

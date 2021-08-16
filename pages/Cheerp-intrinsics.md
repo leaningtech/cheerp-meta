@@ -1,3 +1,7 @@
+---
+title: Cheerp intrinsics
+---
+
 Cheerp uses a few compiler intrinsic to improve the type safety of some operations on objects.
 
 # Clang intrinsics

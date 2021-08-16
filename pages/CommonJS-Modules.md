@@ -1,3 +1,7 @@
+---
+title: CommonJS modules
+---
+
 Cheerp supports the CommonJS standard for JavaScript modules via the `-cheerp-make-module=commonjs` option.
 With this option an `exports` object will be automatically populated with all the exported functions.
 This allows JavaScript code from other files to use `require()` and import them.

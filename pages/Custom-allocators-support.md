@@ -1,3 +1,7 @@
+---
+title: Custom allocators support
+---
+
 One common issue when porting code to Cheerp is the lack of support for custom allocators that return void pointers.
 
 Let's take this code for example:

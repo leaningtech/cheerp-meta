@@ -1,3 +1,7 @@
+---
+title: Cheerp PreExecuter
+---
+
 # Introduction
 
 Standard methods to reduce the size of JavaScript code are compression (using a packer or gzip/brotli through the HTTP server), and minification (e.g. removing comments and white spaces from the source, shortening variable names). This latter approach has been an integral part of Cheerp since the 1.1 release.

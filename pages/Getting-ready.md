@@ -1,3 +1,7 @@
+---
+title: Getting ready
+---
+
 Cheerp in itself has no dependencies, but the recommended workflow and the tutorials make use of: 
 + a command line prompt
 + a JavaScript engine

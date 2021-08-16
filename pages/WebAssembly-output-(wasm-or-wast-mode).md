@@ -1,3 +1,7 @@
+---
+title: WebAssembly output
+---
+
 # Generate WebAssembly output
 
 Setting the command line flag `-target cheerp-wasm` lets Cheerp generate binary WebAssembly output:

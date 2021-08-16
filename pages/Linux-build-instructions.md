@@ -1,3 +1,7 @@
+---
+title: Linux build instructions
+---
+
 Cheerp is composed of multiple components, they are somewhat interdependent and should be built together.
 
 # Prerequisites

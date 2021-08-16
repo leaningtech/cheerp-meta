@@ -1,3 +1,7 @@
+---
+title: Windows and macOS installation
+---
+
 We provide prebuilt Windows and macOS binaries for your convenience.
 
 # Windows

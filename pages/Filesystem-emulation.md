@@ -1,3 +1,7 @@
+---
+title: Filesystem emulation
+---
+
 As part of the ```libposixcompat``` library, Cheerp includes functionality to emulate filesystem access for ported applications. This library is only available to commercial users of Cheerp.
 
 ## Usage

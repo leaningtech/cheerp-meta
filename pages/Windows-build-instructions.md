@@ -1,3 +1,7 @@
+---
+title: Windows build instructions
+--- 
+
 The following instructions will guide you in building the lastest version of cheerp on Windows systems. Building the core compiler on Windows using Microsoft Visual Studio is fully supported, but building the base libraries (newlib, libc++, libc++abi) is not. You can grab a working copy from the latest release from any platform as they are platform independent.
 
 # Requirements

@@ -1,3 +1,7 @@
+---
+title: Tutorial - DOM manipulation
+---
+
 # Using DOM APIs
 
 The following example shows how to write a simple Web application that uses the Browser's DOM functionalities. Check our [online API reference](http://leaningtech.com/API) for extensive documentation of Web APIs in the client namespace using Cheerp.

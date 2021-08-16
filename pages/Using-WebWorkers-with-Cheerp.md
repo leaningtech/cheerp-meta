@@ -1,3 +1,7 @@
+---
+title: WebWorkers with Cheerp
+---
+
 # WebWorkers vs. PThreads
 
 PThreads is the main threading API on posix platforms, such as Linux. It makes it possible to run concurrent threads of execution that have the same view of memory (i.e. they run in the same address space).

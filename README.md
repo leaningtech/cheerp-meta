@@ -1,6 +1,11 @@
-<p align="center"><img src="https://github.com/leaningtech/cheerp-meta/blob/master/media/cheerp_light_background.png" width="300"></p>
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-# Cheerp - a C/C++ compiler for Web applications
+#layout: home
+title: Cheerp - a C/C++ compiler for Web applications
+permalink: /
+---
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
@@ -10,7 +15,7 @@ Cheerp is an open-source, commercial C/C++ compiler for Web applications. It all
 
 Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](https://github.com/leaningtech/cheerp-meta/wiki/Changelog)
 
-Main project link: https://leaningtech.com/cheerp/
+Main project link: [https://leaningtech.com/cheerp/](https://leaningtech.com/cheerp/)
 
 This repository is the main reference for documentation, issue tracking, and release notes.
 

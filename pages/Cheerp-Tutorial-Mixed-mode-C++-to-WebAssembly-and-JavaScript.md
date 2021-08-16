@@ -1,3 +1,7 @@
+---
+title: Tutorial - Pong
+---
+
 This tutorial will guide you through the steps to create a simple game of pong in C++, and compile it to a combination of WebAssembly (game logic) and JavaScript (game graphics) with Cheerp 2.0.
 
 # Hello World

@@ -1,3 +1,7 @@
+---
+title: Changelog
+---
+
 Cheerp 2.6 - December 16th, 2020
 
         * Improved handling of WebAssembly instantiation errors

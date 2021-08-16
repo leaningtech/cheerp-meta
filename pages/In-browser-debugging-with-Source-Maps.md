@@ -1,3 +1,7 @@
+---
+title: Source Maps
+---
+
 Cheerp takes advantage of the [SourceMaps web standard](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) to provide in-browser debugging of C++ source code. Generating a source map allows the browser to know the location of the C++ source files. Most modern browsers also support showing the C++ source code while debugging a Cheerp-compiled application, both when an exception is raised or on a manually set breakpoint.
 
 # Enabling source map support
