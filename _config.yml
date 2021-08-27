@@ -30,6 +30,12 @@ remote_theme: carlopi/leaningtech-docs
 plugins:
  - jekyll-seo-tag
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "https://opengraph.githubassets.com/bc9dec9762126442f3c47aae6d7a8b5ef888607053adc47f358121bd2a878cb0/carlopi/cheerp-meta"
+
 repository: https://github.com/carlopi/cheerp-meta
 website: https://leaningtech.com/cheerp/
 issues: https://github.com/leaningtech/cheerp-meta/issues
