@@ -22,6 +22,12 @@ tagline:
   line1: "Cheerp - the C++ compiler for the Web"
   line2: "Documentation & Tutorials"
 
+social_links:
+  twitter: leaningtech
+  github:  leaningtech
+  medium:  leaningtech
+  linkedin: leaning-technologies-Ltd
+
 download: "https://leaningtech.com/cheerp/#download"
 
 # Build settings
