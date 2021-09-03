@@ -22,6 +22,8 @@ tagline:
   line1: "Cheerp - the C++ compiler for the Web"
   line2: "Documentation & Tutorials"
 
+download: "https://leaningtech.com/cheerp/#download"
+
 # Build settings
 markdown: kramdown
 remote_theme: leaningtech/leaningtech-docs
