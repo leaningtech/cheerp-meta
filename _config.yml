@@ -13,19 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Cheerp's Wiki
+title: Cheerp - Documentation
 description: >- # this means to ignore newlines until "baseurl:"
   Main documentation and tutorials for Cheerp | the C++ compiler for the Web.
-  Edit directly any markdown file in the cheerp-meta repository to have it automatically updated.
 baseurl: "/cheerp-meta" # the subpath of your site, e.g. /blog
 logo: "/assets/cheerp_logo.png"   # Change to relevant file
 tagline:
-  line1: "The C++ compiler for the Web"
+  line1: "Cheerp - the C++ compiler for the Web"
   line2: "Documentation & Tutorials"
 
 # Build settings
 markdown: kramdown
-remote_theme: carlopi/leaningtech-docs
+remote_theme: leaningtech/leaningtech-docs
 
 plugins:
  - jekyll-seo-tag
@@ -34,9 +33,9 @@ defaults:
   - scope:
       path: ""
     values:
-      image: "https://opengraph.githubassets.com/bc9dec9762126442f3c47aae6d7a8b5ef888607053adc47f358121bd2a878cb0/carlopi/cheerp-meta"
+      image: "https://opengraph.githubassets.com/0695f40a0d2d9ee5d8871e5f80042de3b061f7496b092d086712709c9d0f1a6e/leaningtech/cheerp-meta"
 
-repository: https://github.com/carlopi/cheerp-meta
+repository: https://github.com/leaningtech/cheerp-meta
 website: https://leaningtech.com/cheerp/
 issues: https://github.com/leaningtech/cheerp-meta/issues
 chat: https://gitter.im/leaningtech/cheerp
