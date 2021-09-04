@@ -7,7 +7,7 @@ This tutorial will guide you through the steps to create a simple game of pong i
 # Hello World
 Source code: [pong.cpp](tutorials/tutorial_1/pong1/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong1/pong.html).
 
-We will start by building a simple console-based Hello World. To get started, you need to download Cheerp and [install](https://github.com/leaningtech/cheerp-meta/wiki#buildinstallation) it on your machine. In this tutorial, we will assume a Linux installation of Cheerp available on ``/opt/cheerp/bin/clang++``.
+We will start by building a simple console-based Hello World. To get started, you need to download Cheerp and [install](Linux-build-instructions) it on your machine. In this tutorial, we will assume a Linux installation of Cheerp available on ``/opt/cheerp/bin/clang++``.
 
 Let's create a new C++ file ``pong.cpp`` as follows:
 

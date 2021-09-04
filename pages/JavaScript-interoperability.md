@@ -12,7 +12,7 @@ Cheerp implements three advanced interoperability mechanisms to interface C++ co
 
 The ```[[cheerp::jsexport]]``` attribute can be applied to C++ class and struct definitions, to expose them to JavaScript.
 
-[See here for in-depth information about how to use it and its limitations](https://github.com/leaningtech/cheerp-meta/wiki/JSExport-attribute).
+[See here for in-depth information about how to use it and its limitations](JSExport-attribute).
 
 A basic example of it's usage would be:
 
@@ -49,7 +49,7 @@ console.log(factorial(5));
 ```
 
 
-Special considerations apply when using the ```jsexport``` attribute and WebAssembly output, for more information [see here](https://github.com/leaningtech/cheerp-meta/wiki/WebAssembly-output-(wasm-or-wast-mode)#using-cheerpjsexport-in-combination-with-webassembly).
+Special considerations apply when using the ```jsexport``` attribute and WebAssembly output, for more information [see here](WebAssembly-output-(wasm-or-wast-mode)#using-cheerpjsexport-in-combination-with-webassembly).
 
 # The \__asm__ keyword
 

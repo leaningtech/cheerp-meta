@@ -74,7 +74,7 @@ The simple vector program also compiles to a large JavaScript output (665 KB). P
 
 A global constructor can be pre-executed a compile time only if it meets certain criteria:
 
-- All the code in the constructor needs to be **type safe** and representable with the [Cheerp Memory Model](https://github.com/leaningtech/cheerp-meta/wiki/Cheerp-memory-model). This is automatically true for all the code that compiles in `genericjs` mode, but not necessarily for code compiled to `asmjs` or `wasm`.
+- All the code in the constructor needs to be **type safe** and representable with the [Cheerp Memory Model](Cheerp-memory-model). This is automatically true for all the code that compiles in `genericjs` mode, but not necessarily for code compiled to `asmjs` or `wasm`.
 
 - The constructor cannot call code defined in the `client` namespace, or use the `__asm__` keyword.
 

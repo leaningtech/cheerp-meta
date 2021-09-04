@@ -46,4 +46,4 @@ Knowing how to launch it from command line could be useful, for example ```firef
 This is not strictly needed but it could be interesting to compare Cheerp compilation results with native compilations and experiment a bit.
 
 ## Done
-Great, everything is set, now back to the [Tutorials](https://github.com/leaningtech/cheerp-meta/wiki#tutorials).
+Great, everything is set, now back to the [Tutorials](Cheerp-Tutorial).
