@@ -41,7 +41,7 @@ and open it with your favourite browser.
 
 As you can see the text should have been `Boring static text` but has been replaced by our script.
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/Dom1.png)
+![]({{site.baseurl}}/assets/Dom1.png)
 
 ## Using callbacks <a name="callbackuse"></a>
 
@@ -124,7 +124,7 @@ void webMain()
 }
 ```
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/Dom2.png)
+![]({{site.baseurl}}/assets/Dom2.png)
 
 When declaring JavsScript methods in C++ you can use the following data types:
 
@@ -238,4 +238,4 @@ void webMain()
 }
 ```
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/xhr.png)
+![]({{site.baseurl}}/assets/xhr.png)

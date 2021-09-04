@@ -73,7 +73,7 @@ Now we need a [html file](/tutorials/dom_access/dom.html):
     <script src="dom.js"></script>
   </head>
   <body>
-    <img src="https://raw.githubusercontent.com/wiki/leaningtech/cheerp-meta/Diagram_browser.png"></img>
+    <img src="{{site.baseurl}}/assets/Diagram_browser.png"></img>
   </body>
 </html>
 ```

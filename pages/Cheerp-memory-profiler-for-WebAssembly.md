@@ -38,7 +38,7 @@ You can use the ```memprofui.js``` visualiser to get a real-time view of memory 
 </html>
 ```
 You should see at the bottom of the browser window a graph similar to this one:
-![Memory consumption graph](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-meta/MemProfUI_Graph.gif)
+![Memory consumption graph]({{site.baseurl}}/assets/MemProfUI_Graph.gif)
 
 On the horizontal axis you can see the time from the start of the program, and on the vertical the memory consumption at any given moment.
 
@@ -63,7 +63,7 @@ Returns information for all the live allocations:
 * size of the memory block
 * stack trace that led to the creation of that block of memory, parsed and formatted
 
-![Using the browser console gives a better formatted stack trace](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-meta/MemProfUI_Console4.gif)
+![Using the browser console gives a better formatted stack trace]({{site.baseurl}}/assets/MemProfUI_Console4.gif)
 
 ## Introspection API
 

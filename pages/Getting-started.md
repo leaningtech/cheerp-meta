@@ -111,7 +111,7 @@ Now that you completed the first tutorial, we advise to going through the others
 + [your first WebAssembly program](WebAssembly-output-(wasm-or-wast-mode))
 + [a game of Pong in WebAssembly](Cheerp-Tutorial%3A-Mixed-mode-C++-to-WebAssembly-and-JavaScript).
 
-We recommend also reading the [porting guidelines](Porting-guidelines), but there is plenty of interesting materials in this wiki to get back when you will want/need more, some of the most important topics to check out are:
+We recommend also reading the [porting guidelines](Porting-guidelines), but there is plenty of interesting materials in this documentation to get back when you will want/need more, some of the most important topics to check out are:
 + [jsexport attribute](JavaScript-interoperability)
 + Compilation modes tradeoff [JavaScript / Wasm / asm.js](...)
 + [Manipulating the DOM](Browser-side-programming-guide)

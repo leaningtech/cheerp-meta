@@ -13,7 +13,7 @@ Cheerp takes advantage of the [SourceMaps web standard](http://www.html5rocks.co
 3. Click the settings button (Circled in green)
 4. Make sure "Show Original Sources" is selected
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/debug1.png)
+![]({{site.baseurl}}/assets/debug1.png)
 
 ## Chrome
 
@@ -22,9 +22,9 @@ Cheerp takes advantage of the [SourceMaps web standard](http://www.html5rocks.co
 3. Click the settings button (Circled in green)
 4. Make sure "Enable JavaScript source maps" is selected
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/debug3.png)
+![]({{site.baseurl}}/assets/debug3.png)
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/debug2.png)
+![]({{site.baseurl}}/assets/debug2.png)
 
 # How to generate Source Maps
 
@@ -40,7 +40,7 @@ The Cheerp specific ```-cheerp-sourcemap``` option instructs Cheerp to output th
 
 # Practical example
 
-Follow the instruction in the [Cheerp Tutorial](https://github.com/leaningtech/cheerp-wiki/wiki/Cheerp_Tutorial#example1) and create the ```example.cpp``` and ```example.html``` files.
+Follow the instruction in the [Cheerp Tutorial](Cheerp_Tutorial#example1) and create the ```example.cpp``` and ```example.html``` files.
 
 Build ```example.js``` and ```example.js.map``` using the following command line
 
@@ -59,7 +59,7 @@ firefox http://127.0.0.1:8000/example.html
 
 If Source Maps are enabled (as described above) you should see the C++ source code in the debugging tab of the developers tools.
 
-![](https://raw.githubusercontent.com/wiki/leaningtech/cheerp-wiki/debug4.png)
+![]({{site.baseurl}}/assets/debug4.png)
 
 # Command line options
 
