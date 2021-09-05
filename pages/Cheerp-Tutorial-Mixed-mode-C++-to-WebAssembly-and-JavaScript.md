@@ -298,4 +298,4 @@ WebAssembly is an amazing opportunity to truly realize the promise of the Web as
 
 [Cheerp](https://github.com/leaningtech/cheerp-meta) contributes to the WebAssembly and 'Web as a platform' ecosystem by enabling C/C++ to be compiled to a combination of high-performance WebAssembly code, and high-flexilibity JavaScript code, with full transparent interaction with the DOM and external JavaScript libraries, and dynamic memory / garbage collection.  
 
-You can [download Cheerp](https://leaningtech.com/pages/cheerp.html#Install) today and start using it in a few minutes. Give it a try!
+You can [download Cheerp](https://leaningtech.com/cheerp/#download) today and start using it in a few minutes. Give it a try!

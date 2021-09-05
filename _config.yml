@@ -16,6 +16,8 @@
 title: Cheerp - Documentation
 description: >- # this means to ignore newlines until "baseurl:"
   Main documentation and tutorials for Cheerp | the C++ compiler for the Web.
+url: "https://leaningtech.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baserepo: "https://github.com/leaningtech"
 baseurl: "/cheerp-meta" # the subpath of your site, e.g. /blog
 logo: "/assets/cheerp_logo.png"   # Change to relevant file
 tagline:
