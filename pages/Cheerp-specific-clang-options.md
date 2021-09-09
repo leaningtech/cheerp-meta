@@ -10,8 +10,6 @@ title: Cheerp specific clang options
 
   `-cheerp-bounds-check`                Generate debug code for bounds-checking array and object members accesses
 
-  `-cheerp-cfg-legacy`                  Use the legacy relooper algorithm to render the cfg
-
   `-cheerp-dump-bc`                     Output the final BC file
 
   `-cheerp-fix-wrong-func-casts`        Generate wrappers for functions casted to types with more arguments
@@ -26,7 +24,7 @@ title: Cheerp specific clang options
 
   `-cheerp-linear-stack-size=<value>`   Set wasm/asm.js stack size (in MB, default is 1)
 
-  `-cheerp-make-module=<value>`         Expose the compiled code as a [closure/commonjs] module
+  `-cheerp-make-module=<value>`         Expose the compiled code as a [closure/commonjs/es6] module
 
   `-cheerp-make-module`                 Create a closure around JS to avoid global namespace pollution
 
