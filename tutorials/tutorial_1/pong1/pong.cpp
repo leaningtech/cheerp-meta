@@ -10,7 +10,7 @@
 	client::console.log(str);
 }
 
-// This function is the entry point of the program. Since we will be compiling this with the -cheerp-mode=wasm option, it will
+// This function is the entry point of the program. Since we will be compiling this with the -target cheerp-wasm option, it will
 // be compiled to WebAssembly by default.
 void webMain()
 {

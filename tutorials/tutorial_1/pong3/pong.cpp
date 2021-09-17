@@ -50,7 +50,7 @@ public:
 	}
 };
 
-// This whole class will be compiled to Wasm code by default since we are using the -cheerp-mode=wasm
+// This whole class will be compiled to Wasm code by default since we are using the -target cheerp-wasm
 // command line option. This is a game entity so it's better to get as much performance as we can.
 class Platform
 {
@@ -97,7 +97,7 @@ void mainLoop()
 	platform.render();
 }
 
-// This function is the entry point of the program. Since we will be compiling this with the -cheerp-mode=wasm option, it will
+// This function is the entry point of the program. Since we will be compiling this with the -target cheerp-wasm option, it will
 // be compiled to WebAssembly by default.
 void webMain()
 {
