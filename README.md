@@ -1,5 +1,4 @@
 ---
-#layout: home
 title: Cheerp - the C/C++ compiler for Web applications
 ---
 
