@@ -1,6 +1,6 @@
 ---
 #layout: home
-title: Cheerp - a C/C++ compiler for Web applications
+title: Cheerp - the C/C++ compiler for Web applications
 ---
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
