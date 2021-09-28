@@ -20,7 +20,7 @@ title: Cheerp specific clang options
 
   `-cheerp-linear-heap-size=<value>`    Set wasm/asm.js heap size (in MB, default is 8)
 
-  `-cheerp-linear-output=<value>`       Output format for the linear memory part of the program [wasm/wast/asmjs]
+  `-cheerp-linear-output=<value>`       Output format for the linear memory part of the program [wasm/asmjs]
 
   `-cheerp-linear-stack-size=<value>`   Set wasm/asm.js stack size (in MB, default is 1)
 
@@ -68,9 +68,9 @@ title: Cheerp specific clang options
 
   `-cheerp-use-bigints`                 Use the BigInt type in JS to represent i64 values
 
-  `-cheerp-wasm-disable=<value>`        Comma separated list of WebAssembly features to disable [sharedmem/growmem/exportedtable/anyref/returncalls]
+  `-cheerp-wasm-disable=<value>`        Comma separated list of WebAssembly features to disable [sharedmem/growmem/exportedtable/externref/returncalls/branchhinting]
 
-  `-cheerp-wasm-enable=<value>`         Comma separated list of WebAssembly features to enable [sharedmem/growmem/exportedtable/anyref/returncalls]
+  `-cheerp-wasm-enable=<value>`         Comma separated list of WebAssembly features to enable [sharedmem/growmem/exportedtable/externref/returncalls/branchhinting]
 
   `-cheerp-wasm-externref`              Enable wasm anyref and relax some ffi checks
 
