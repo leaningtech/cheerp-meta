@@ -4,11 +4,11 @@ title: Cheerp - the C/C++ compiler for Web applications
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
-[![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](pages/Changelog)
+[![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](Changelog)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code (up to C++17) to WebAssembly, JavaScript, asm.js or a combination thereof.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](pages/Changelog)
+Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.6-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.6-brightgreen.svg)](Changelog)
 
 Main project link: [https://leaningtech.com/cheerp/](https://leaningtech.com/cheerp/)
 
@@ -37,12 +37,12 @@ Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyle
 Get started
 ------
 
-First time user? We recommend following the [Getting started](pages/Getting-started.md) page, that will guide though this steps:
-+ [Install](pages/Getting-started.md#install "Install")
-+ [Cheerp basics](pages/Getting-started.md#cheerp-basics "Cheerp basics")
-+ [Ready?](pages/Getting-started.md#ready "Ready?")
-+ [Hello, World!](pages/Getting-started.md#hello-world "Hello, World!")
-+ [Tutorials](pages/Getting-started.md#tutorials "Tutorials")
+First time user? We recommend following the [Getting started](Getting-started.md) page, that will guide though this steps:
++ [Install](Getting-started.md#install "Install")
++ [Cheerp basics](Getting-started.md#cheerp-basics "Cheerp basics")
++ [Ready?](Getting-started.md#ready "Ready?")
++ [Hello, World!](Getting-started.md#hello-world "Hello, World!")
++ [Tutorials](Getting-started.md#tutorials "Tutorials")
 
 Or look at the sidebar to find lots of useful materials
 
