@@ -2,11 +2,11 @@
 title: Cheerp memory model
 ---
 
-Cheerp compiles at the same time to 2 diffent languages: either pure JavaScript or WebAssembly (or Wast or AsmJS). They come with 2 different memory models, JavaScript-like and WebAssembly-like. Understanding them is a key in understanding Cheerp approach, allowing to use Cheepr optimally.
+Cheerp compiles at the same time to 2 diffent languages: either pure JavaScript or WebAssembly (or Wast or AsmJS). They come with 2 different memory models, JavaScript-like and WebAssembly-like. Understanding them is a key in understanding Cheerp approach, allowing to use Cheerp optimally.
 
-WebAssembly-like or Linear Memory is the simpler to understand coming from the world of C++: there is a array of bytes, and every object is stored somewhere in that array. That maps fairly easily to the standard memory model, and allows the same kind of operations:
+WebAssembly-like or Linear Memory is the simpler to understand coming from the world of C++: there is an array of bytes, and every object is stored somewhere in that array. That maps fairly easily to the standard memory model, and allows the same kind of operations:
 * accessing a random point of the array (both for writing and reading).
-* pointers(that becomes just index into the array).
+* pointers (that becomes just index into the array).
 
 This model is relatively straightforward to transpile to, but has 2 main problems:
 * it does not allow to pass objects to code that is not been compiled by us (think other JavaScript libraries, or the DOM, or browser resources)
