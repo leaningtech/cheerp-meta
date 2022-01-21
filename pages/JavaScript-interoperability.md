@@ -14,7 +14,7 @@ The ```[[cheerp::jsexport]]``` attribute can be applied to C++ class and struct 
 
 [See here for in-depth information about how to use it and its limitations](JSExport-attribute).
 
-A basic example of it's usage would be:
+A basic example of its usage would be:
 
 ```c++
 class [[cheerp::jsexport]] JsStruct
