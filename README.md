@@ -37,12 +37,12 @@ Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyle
 Get started
 ------
 
-First time user? We recommend following the [Getting started](Getting-started) page, that will guide though this steps:
-+ [Install](Getting-started#install "Install")
-+ [Cheerp basics](Getting-started#cheerp-basics "Cheerp basics")
-+ [Ready?](Getting-started#ready "Ready?")
-+ [Hello, World!](Getting-started#hello-world "Hello, World!")
-+ [Tutorials](Getting-started#tutorials "Tutorials")
+First time user? We recommend following the [Getting started](https://docs.leaningtech.com/cheerp/Getting-started#install) page, that will guide though this steps:
++ [Install](https://docs.leaningtech.com/cheerp/Getting-started#install "Install")
++ [Cheerp basics](https://docs.leaningtech.com/cheerp/Getting-started#cheerp-basics "Cheerp basics")
++ [Ready?](https://docs.leaningtech.com/cheerp/Getting-started#ready "Ready?")
++ [Hello, World!](https://docs.leaningtech.com/cheerp/Getting-started#hello-world "Hello, World!")
++ [Tutorials](https://docs.leaningtech.com/cheerp/Getting-started#tutorials "Tutorials")
 
 Or look at the sidebar to find lots of useful materials
 
