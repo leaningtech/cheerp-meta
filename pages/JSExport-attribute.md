@@ -21,7 +21,7 @@ Example:
         return n * factorial(n-1);
 }
 
-class [[cheerp::jsexport]] JsStruct
+class [[cheerp::jsexport]][[cheerp::genericjs]] JsStruct
 {
 private:
         float a;
