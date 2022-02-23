@@ -14,7 +14,7 @@
   * Interfacing with the browser
       * [Interoperability with web frameworks (Vue, Reactor, Angular)](./Interoperability-with-web-frameworks-(Vue,-Reactor,-Angular))
       * [CommonJS Modules](./CommonJS-Modules)
-      * [WebAssembly output (wasm or wast mode)](./WebAssembly-output-(wasm-or-wast-mode))
+      * [WebAssembly output](./WebAssembly-output)
   * Deep dives
       * [Cheerp memory model](./Cheerp-memory-model)
       * [Cheerp PreExecuter](./Cheerp-PreExecuter)

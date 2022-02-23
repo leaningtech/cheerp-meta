@@ -49,7 +49,7 @@ console.log(factorial(5));
 ```
 
 
-Special considerations apply when using the ```jsexport``` attribute and WebAssembly output, for more information [see here](WebAssembly-output-(wasm-or-wast-mode)#using-cheerpjsexport-in-combination-with-webassembly).
+Special considerations apply when using the ```jsexport``` attribute and WebAssembly output, for more information [see here](WebAssembly-output#using-cheerpjsexport-in-combination-with-webassembly).
 
 # The \__asm__ keyword
 

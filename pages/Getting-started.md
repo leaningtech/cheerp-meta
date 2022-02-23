@@ -108,7 +108,7 @@ Tutorials
 Now that you completed the first tutorial, we advise to going through the others to aquire some important knoledge:
 + [Hello, Wasm!](Tutorial-Hello-Wasm)
 + [DOM manipulation](Cheerp-Tutorial-DOM-Manipulation)
-+ [your first WebAssembly program](WebAssembly-output-(wasm-or-wast-mode))
++ [your first WebAssembly program](WebAssembly-output)
 + [a game of Pong in WebAssembly](Cheerp-Tutorial%3A-Mixed-mode-C++-to-WebAssembly-and-JavaScript).
 
 We recommend also reading the [porting guidelines](Porting-guidelines), but there is plenty of interesting materials in this documentation to get back when you will want/need more, some of the most important topics to check out are:
