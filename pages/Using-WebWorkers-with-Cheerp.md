@@ -54,7 +54,7 @@ void webMain()
 }
 ```
 
-You can build each files using the following command line (for more information see [[Getting Started]])
+You can build each files using the following command line (for more information see [Getting Started](Getting-started))
 ```
 /opt/cheerp/bin/clang++ -target cheerp cheerpWorkerHost.cpp -o cheerpWorkerHost.js
 /opt/cheerp/bin/clang++ -target cheerp cheerpWorker.cpp -o cheerpWorker.js

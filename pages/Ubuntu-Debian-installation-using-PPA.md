@@ -8,7 +8,7 @@ https://launchpad.net/~leaningtech-dev/+archive/ubuntu/cheerp-ppa
 
 For other Linux distributions, please build from source
 
-[[Linux-build-instructions]]
+[Linux build](Linux-build-instructions)
 
 ## Adding the repository
 To add it to your system you have two options:
