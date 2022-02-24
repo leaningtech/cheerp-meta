@@ -28,8 +28,6 @@ title: Cheerp specific clang options
 
   `-cheerp-make-module`                 Create a closure around JS to avoid global namespace pollution
 
-  `-cheerp-mode=<value>`                Specify which mode to use by default [genericjs/asmjs]
-
   `-cheerp-no-credits`                  Disable Cheerp credits in JS
 
   `-cheerp-no-icf`                      Disable identical code folding on wasm/asmjs
