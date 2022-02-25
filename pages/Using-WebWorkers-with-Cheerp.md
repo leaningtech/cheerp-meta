@@ -29,6 +29,7 @@ You can use Cheerp to generate JavaScript running in the Worker, JavaScript in t
 
 using namespace client;
 
+[[cheerp::genericjs]]
 void webMain()
 {
         Worker* w = new Worker("cheerpWorker.js");
@@ -45,6 +46,7 @@ void webMain()
 
 using namespace client;
 
+[[cheerp::genericjs]]
 void webMain()
 {
        addEventListener("message", cheerp::Callback([](MessageEvent* e) {
@@ -56,8 +58,8 @@ void webMain()
 
 You can build each files using the following command line (for more information see [Getting Started](Getting-started))
 ```
-/opt/cheerp/bin/clang++ -target cheerp cheerpWorkerHost.cpp -o cheerpWorkerHost.js
-/opt/cheerp/bin/clang++ -target cheerp cheerpWorker.cpp -o cheerpWorker.js
+/opt/cheerp/bin/clang++ -O3 cheerpWorkerHost.cpp -o cheerpWorkerHost.js
+/opt/cheerp/bin/clang++ -O3 cheerpWorker.cpp -o cheerpWorker.js
 ```
 For your convenience here is the needed HTML to execute the code
 

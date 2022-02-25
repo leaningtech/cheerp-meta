@@ -17,7 +17,7 @@ The ```[[cheerp::jsexport]]``` attribute can be applied to C++ class and struct 
 A basic example of its usage would be:
 
 ```c++
-class [[cheerp::jsexport]] JsStruct
+class [[cheerp::jsexport]][[cheerp::genericjs]] JsStruct
 {
 private:
         float a;
@@ -32,7 +32,8 @@ public:
         }
 };
 
-[[cheerp::jsexport]] int factorial(int N) {
+[[cheerp::jsexport]]
+int factorial(int N) {
         if (N < 2)
                 return 1;
         return N * factorial(N-1);
@@ -48,8 +49,7 @@ testExport.test();
 console.log(factorial(5));
 ```
 
-
-Special considerations apply when using the ```jsexport``` attribute and WebAssembly output, for more information [see here](WebAssembly-output#using-cheerpjsexport-in-combination-with-webassembly).
+Classes or struct that have to be JSExported have to tagged with both ```[[cheerp::jsexport]]``` and ```[[cheerp::genericjs]]```.
 
 # The \__asm__ keyword
 
@@ -71,7 +71,7 @@ assert(stringLength == stringFromDom->get_length());
 
 The syntax follows the usual conventions of inline asm code, namely
 
-```
+``
 __asm__(code : output constraints : input constraints : clobber constraints)
 ```
 
@@ -83,6 +83,9 @@ There are some Cheerp specific limitations at this time:
 * Only integral types, floating point types and pointers to object in the ```client``` namespace (i.e. DOM or native JavaScript objects) can be used.
 
 A working example/tutorial is here: [example of _ asmjs _ and namespace client on Github](https://gist.github.com/carlopi/c36e9b8f0eaf72c569491fadac331707)
+
+Code inside ```__asm__``` tag should never throw to the external scope.
+
 
 ## Clobbering names
 
@@ -100,7 +103,7 @@ All names declared as clobbered will be globally excluded from the list of symbo
 
 # The CHEERP_OBJECT macro
 
-A common use case for inline asm is to return a literal object to javascript:
+A common use case for inline asm is to return a literal object to JavaScript:
 ```
 double field1 = 1;
 client::String* field2 = new client::String("hello");
@@ -126,11 +129,12 @@ Currently the macro has the following limitations:
 Cheerp treats every function and class inside the ```client``` namespace as a declaration for something implemented by the browser or JavaScript. You are free to add new declarations there for functions implemented in JavaScript. For example:
 
 ```c++
-namespace client
+namespace [[cheerp::genericjs]] client
 {
 	int someJavaScriptMethod(int arg1, const String& arg2);
 }
 
+[[cheerp::genericjs]]
 void webMain()
 {
 	printf("JavaScript returned %i\n", client::someJavaScriptMethod(42, "This is converted to a JavaScript String"));

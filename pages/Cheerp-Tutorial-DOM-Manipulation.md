@@ -4,14 +4,15 @@ title: Tutorial - DOM manipulation
 
 # Using DOM APIs
 
-The following example shows how to write a simple Web application that uses the Browser's DOM functionalities. Check our [online API reference](http://leaningtech.com/API) for extensive documentation of Web APIs in the client namespace using Cheerp.
+The following example shows how to write a simple Web application that uses the Browser's DOM functionalities. Check our for example [clientlib.h](https://github.com/leaningtech/cheerp-utils/blob/master/include/client/clientlib.h) for a glance of the Web API forward declared in the client namespace using Cheerp.
 
 ```c++
 #include <cheerp/clientlib.h>
 
+[[cheerp::genericjs]]
 void webMain()
 {
-    // client::document represent the Javascript document object
+    // client::document represent the JavaScript document object
     client::Element* titleElement = \ 
                 client::document.getElementById("pagetitle");
     // Wide strings can also be implicitly converted to JavaScript Strings
@@ -19,7 +20,7 @@ void webMain()
                  with non-Latin letters ΩЯÅ");
 }
 ```
-Save it as `dom1.cpp` and compile it (how? `/opt/cheerp/bin/clang++ -target cheerp dom1.cpp -o dom1.js`)
+Save it as `dom1.cpp` and compile it (how? `/opt/cheerp/bin/clang++ -O3 dom1.cpp -o dom1.js`)
 
 Now embed it in a web page like:
 
@@ -54,6 +55,7 @@ Let's extend the previous program to revert the original text after 3 seconds.
 // client is a regular C++ namespace, so we can reduce verbosity by using it
 using namespace client;
 
+[[cheerp::genericjs]]
 void webMain()
 {
     Element* titleElement=document.getElementById("pagetitle");
@@ -106,7 +108,7 @@ Let's use the JavaScript ```changeTitle``` function from C++
 
 // We need to extend the client namespace to declare our
 // custom JavaScript function
-namespace client
+namespace [[cheerp::genericjs]] client
 {
     // The name should be the same as the JavaScript one
     // The parameters needs to be a const client::String reference
@@ -116,6 +118,7 @@ namespace client
 
 using namespace client;
 
+[[cheerp::genericjs]]
 void webMain()
 {
     Element* titleElement=document.getElementById("pagetitle");
@@ -138,6 +141,7 @@ When declaring JavsScript methods in C++ you can use the following data types:
 You can also use the ```__asm__``` keyword to inline JavaScript code in the middle of C++ code
 
 ```c++
+[[cheerp::genericjs]]
 void webMain()
 {
     __asm__("console.log('Inline JS example')");
@@ -157,7 +161,7 @@ using namespace client;
 // The class can of course have any name
 // The [[cheerp::jsexport]] attribute tells Cheerp to make
 // the class available to JavaScript code
-class [[cheerp::jsexport]] JsBridge
+class [[cheerp::jsexport]][[cheerp::genericjs]] JsBridge
 {
 private:
     // The class is allowed to have member variables
@@ -175,10 +179,7 @@ public:
     }
 };
 
-// An entry point, even if empty, is still required
-void webMain()
-{
-}
+// Note that entry point is missing, this is still fine
 ```
 
 We also need to modify the HTML page to interact with the jsexport-ed class
@@ -193,8 +194,9 @@ We also need to modify the HTML page to interact with the jsexport-ed class
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>
         var jsBridge=null;
-        function callCPPCode()
+        async function callCPPCode()
         {
+	    await JsBridge.promise;
             if(!jsBridge)
                 jsBridge=new JsBridge();
             var ret=jsBridge.addAndReturn(3);
@@ -221,6 +223,7 @@ We will show how to use ```XMLHttpRequest``` to retrieve a file. Please note tha
 
 using namespace client;
 
+[[cheerp::genericjs]]
 void webMain()
 {
     XMLHttpRequest* xhr=new XMLHttpRequest();

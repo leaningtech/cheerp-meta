@@ -33,6 +33,7 @@ You can access the ```document``` global object directly from C++ code. In the n
 #include <cheerp/client.h> //Misc client side stuff
 #include <cheerp/clientlib.h> //Complete DOM/HTML5 interface
 
+[[cheerp::genericjs]]
 void outputNumberOfElementsToTheConsole()
 {
         double number=client::document.getElementsByTagName("*")->get_length();
@@ -40,6 +41,7 @@ void outputNumberOfElementsToTheConsole()
 }
 
 //This function will be called only after the DOM is fully loaded
+[[cheerp::genericjs]]
 void loadCallback()
 {
         client::console.log("Hi from loadCallback!");
@@ -49,6 +51,7 @@ void loadCallback()
         client::console.log("Bye from loadCallback!");
 }
 
+[[cheerp::genericjs]]
 void webMain()
 {
         client::console.log("Hi from webMain!");
@@ -61,7 +64,7 @@ void webMain()
 ```
 
 Compiling with:
-```/opt/cheerp/bin/clang++ -target cheerp dom.cpp -o dom.js```
+```/opt/cheerp/bin/clang++ -O3 dom.cpp -o dom.js```
 
 Now we need a [html file](/tutorials/dom_access/dom.html):
 ```html
@@ -123,6 +126,7 @@ Cheerp works at the same level as JavaScript. It is designed to complement or re
 If you want to manipulate the DOM at run-time you can use the same APIs you would use when writing JavaScript. In the following example we will create two DOM elements and set up event handling using the DOM APIs exposed by the browser.
 
 ```c++
+[[cheerp::genericjs]]
 void setupInputAndDisplay()
 {
         using namespace client;

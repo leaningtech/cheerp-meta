@@ -54,7 +54,7 @@ We only need to reference the JavaScript loader, and the WebAssembly binary will
 
 You now need to start a local HTTP server in the directory containing pong.html, pong.js and pong.wasm. Node’s ```http-server -p 8081``` command work well, but any server will do.
 
-Visit your page, for example “http://127.0.0.1:8081” with any browser, and Yyou should see something like this:
+Visit your page, for example “http://127.0.0.1:8081” with any browser, and you should see something like this:
 
 <img src="{{site.baseurl}}/tutorials/tutorial_1/pong1/pong1.png" width="600px">
 
