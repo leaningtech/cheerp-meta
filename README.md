@@ -4,11 +4,11 @@ title: Cheerp - the C/C++ compiler for Web applications
 
 [![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
-[![Latest version](https://img.shields.io/badge/cheerp-2.7rc1-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7rc1-brightgreen.svg)](Changelog)
+[![Latest version](https://img.shields.io/badge/cheerp-2.7-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7-brightgreen.svg)](Changelog)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code to WebAssembly and JavaScript.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.7rc1-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7rc1-brightgreen.svg)](Changelog)
+Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.7-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7-brightgreen.svg)](Changelog)
 
 Main project link: [https://leaningtech.com/cheerp/](https://leaningtech.com/cheerp/)
 

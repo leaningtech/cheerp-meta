@@ -2,21 +2,22 @@
 title: Changelog
 ---
 
-Cheerp 2.7-RC1 - February 23rd, 2022:
+Cheerp 2.7 - March 29th, 2022:
 
-        * Rebase on top of LLVM/Clang 14.0
-        * Switch to monorepo (cheerp-compiler)
-        * Support ES6 modules with -cheerp-make-module=es6
-        * Support for C++ exceptions
-        * Support for catching JavaScript exceptions
-        * Introduction of [[cheerp::interface_name]] attribute
-        * Full rework of Cheerp clang checks
-        * Removal of cheerp-mode command line options
-        * Removal of cfg-legacy command line options
-        * Support for branch hint Wasm custom section
-        * Various performance improvements
-        * Various robustness improvements
-        * PartialExecuter and SinkGenerator IR-optimization passes
+	* Rebase on top of LLVM/Clang 14.0
+	* Switch to monorepo (cheerp-compiler)
+	* Support ES6 modules with -cheerp-make-module=es6
+	* Support for C++ exceptions
+	* Support for catching JavaScript exceptions
+	* Introduction of [[cheerp::interface_name]] attribute
+	* Full rework of Cheerp clang checks
+	* Removal of cheerp-mode command line options
+	* Removal of cfg-legacy command line options
+	* Support for branch hint Wasm custom section
+	* Various performance improvements
+	* Various robustness improvements
+	* PartialExecuter and SinkGenerator IR-optimization passes
+	* Adopt new BranchHinting standard
 
 Cheerp 2.6 - December 16th, 2020
 
