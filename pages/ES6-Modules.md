@@ -135,7 +135,7 @@ Cheerp's ES6 Modules API
 These instantiation are all somehow equivalent:
 
 * instantiation with no arguments
-```javascipt
+```js
 import instantiateFunction from './yourModule.js'
 instantiateFunction().then(module =>
 	{
@@ -144,19 +144,19 @@ instantiateFunction().then(module =>
 	});
 ```
 * instantiation with no absolute path
-```javascipt
+```js
 import instantiateFunction from './yourModule.js'
-instantiateFunction({absPath:'/absolute/path/to/yourModule.js').then(module =>
+instantiateFunction({absPath:'/absolute/path/to/yourModule.wasm'}).then(module =>
 	{
 		console.log("Module has been instantiated!");
 		module.someJSExportedFunc();
 	});
 ```
 * instantiation with buffer
-```javascipt
+```js
 import instantiateFunction from './yourModule.js'
 fetch('/absolute/path/to/yourModule.wasm').then(buffer => {
-	instantiateFunction({buffer:buffer).then(module =>
+	instantiateFunction({buffer:buffer}).then(module =>
 		{
 			console.log("Module has been instantiated!");
 			module.someJSExportedFunc();
@@ -164,16 +164,16 @@ fetch('/absolute/path/to/yourModule.wasm').then(buffer => {
 	});
 ```
 * instantiation with path relative to current module
-```javascipt
+```js
 import instantiateFunction from './yourModule.js'
-instantiateFunction({absPath:new URL('/relative/path/to/yourModule.js', import.meta.url)).then(module =>
+instantiateFunction({absPath:new URL('/relative/path/to/yourModule.wasm', import.meta.url)}).then(module =>
 	{
 		console.log("Module has been instantiated!");
 		module.someJSExportedFunc();
 	});
 ```
 * dynamic instantiation with no arguments
-```javascipt
+```js
 import('./yourModule.js').then(instantiateFunction =>
 	instantiateFunction()).then(module =>
 		{
