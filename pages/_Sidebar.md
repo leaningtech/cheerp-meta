@@ -11,6 +11,7 @@
       * [WebWorkers](./Using-WebWorkers-with-Cheerp)
   * [JavaScript interoperability](./JavaScript-interoperability)
       * [JSExport](./JSExport-attribute)
+      * [Exceptions](./Exceptions-in-Cheerp)
   * Interfacing with the browser
       * [Interoperability with web frameworks (Vue, Reactor, Angular)](./Interoperability-with-web-frameworks-(Vue,-Reactor,-Angular))
       * [CommonJS Modules](./CommonJS-Modules)
