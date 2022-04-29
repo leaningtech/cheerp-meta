@@ -2,8 +2,6 @@
 title: Cheerp specific clang options
 ---
 
-  `-cheerp-asmjs-mem-file=<file>`       Write asm.js initialized memory to `<file>`
-
   `-cheerp-asmjs-symbolic-globals`      Compile global variable addresses as js variables in the asm.js module
 
   `-cheerp-avoid-wasm-traps`            Avoid traps from WebAssembly by generating more verbose code
@@ -71,7 +69,3 @@ title: Cheerp specific clang options
   `-cheerp-wasm-enable=<value>`         Comma separated list of WebAssembly features to enable [sharedmem/growmem/exportedtable/externref/returncalls/branchhinting]
 
   `-cheerp-wasm-externref`              Enable wasm anyref and relax some ffi checks
-
-  `-cheerp-wasm-file=<file>`            Assume wasm file is `<file>`
-
-  `-cheerp-wasm-loader=<file>`          Write wasm loader to `<file>`
