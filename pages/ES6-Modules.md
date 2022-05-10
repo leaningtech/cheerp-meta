@@ -24,7 +24,7 @@ instantiateFunction().then(module =>
 );
 ```
 
-Or using top level await::
+Or using top level await:
 ```javascript
 import instantiateFunction from './yourModule.js'
 
@@ -180,6 +180,19 @@ import('./yourModule.js').then(instantiateFunction =>
 			console.log("Module has been instantiated!");
 			module.someJSExportedFunc();
 		});
+```
+
+
+ES6 modules and top-level await
+---
+
+```js
+import instantiateFunction from './someFile.js'
+
+var module = await instantiateFunction();
+console.log("Module has been instantiated!");
+
+export module;		// or destructuring the different exports
 ```
 
 Why using ES6 Modules (in general)?
