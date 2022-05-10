@@ -2,6 +2,18 @@
 title: Cheerp specific clang options
 ---
 
+Generally useful command line flags:
+
+  `-O3`/`-O2`                           Enable optimizations
+
+  `-fexceptions`                        Enable support for exception handling
+
+  `-Wno-cheerp-unsafe`                  Hide some cheerp-specific warnings
+
+
+
+Cheerp specific command line flags:
+
   `-cheerp-asmjs-symbolic-globals`      Compile global variable addresses as js variables in the asm.js module
 
   `-cheerp-avoid-wasm-traps`            Avoid traps from WebAssembly by generating more verbose code
