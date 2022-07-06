@@ -3,6 +3,8 @@ title: Linux build instructions
 ---
 
 Cheerp is composed of multiple components, they are somewhat interdependent and should be built together.
+This build instructions are for building the latest stable release, Cheerp 2.7.
+
 
 # Prerequisites
 
@@ -20,10 +22,10 @@ You need to get all the sources first. Please define the `CHEERP_SRC` environmen
 mkdir cheerp
 cd cheerp
 export CHEERP_SRC=$PWD
-git clone https://github.com/leaningtech/cheerp-compiler
-git clone https://github.com/leaningtech/cheerp-utils
-git clone https://github.com/leaningtech/cheerp-newlib
-git clone https://github.com/leaningtech/cheerp-libs
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-compiler
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-utils
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-newlib
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-libs
 ```
 
 # Build Cheerp compiler
