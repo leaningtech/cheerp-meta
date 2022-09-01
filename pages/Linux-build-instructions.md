@@ -46,7 +46,7 @@ If you need write privileges to `/opt/cheerp`, then prepend all install commands
 
 ```bash
 cd cheerp-utils
-cmake -B build -DCMAKE_INSTALL_PREFIX=/opt/cheerp ..
+cmake -B build -DCMAKE_INSTALL_PREFIX=/opt/cheerp .
 make -C build install
 cd ..
 
