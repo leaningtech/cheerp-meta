@@ -16,7 +16,7 @@ The following instructions will guide you in building the lastest version of che
 Open a ```cmd``` shell and execute the following commands to download the source code for the Cheerp enabled llvm and clang repositories.
 
 ```cmd
-git clone https://github.com/leaningtech/cheerp-compiler
+git clone https://github.com/leaningtech/cheerp-compiler --depth 1
 ```
 
 # Generate Microsoft Visual Studio projects using CMake
