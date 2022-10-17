@@ -22,10 +22,10 @@ You need to get all the sources first. Please define the `CHEERP_SRC` environmen
 mkdir cheerp
 cd cheerp
 export CHEERP_SRC=$PWD
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-compiler
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-utils
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-newlib
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-libs
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-compiler --depth 1 
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-utils --depth 1
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-newlib --depth 1
+git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-libs --depth 1
 ```
 
 # Build Cheerp compiler
