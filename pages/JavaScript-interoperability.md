@@ -71,7 +71,7 @@ assert(stringLength == stringFromDom->get_length());
 
 The syntax follows the usual conventions of inline asm code, namely
 
-``
+```
 __asm__(code : output constraints : input constraints : clobber constraints)
 ```
 
