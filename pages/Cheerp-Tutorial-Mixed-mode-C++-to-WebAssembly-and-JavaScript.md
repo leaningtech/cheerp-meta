@@ -56,12 +56,12 @@ You now need to start a local HTTP server in the directory containing pong.html,
 
 Visit your page, for example “http://127.0.0.1:8081” with any browser, and you should see something like this:
 
-<img src="{{site.baseurl}}/tutorials/tutorial_1/pong1/pong1.png" width="600px">
+<img src="tutorials/tutorial_1/pong1/pong1.png" width="600px">
 
 Great! We can now move on to build an Hello World that writes on the Canvas.
 
 # Hello World (Canvas)
-Source code: [pong.cpp]({{site.baseurl}}/tutorials/tutorial_1/pong2/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong2/pong.html).
+Source code: [pong.cpp](tutorials/tutorial_1/pong2/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong2/pong.html).
 
 What we will do in this tutorial is keeping all the Canvas manipulation in the JavaScript output, and the rest of the game in WebAssembly. We will be doing our rendering using the Canvas 2D Web API, and we will also use ``requestAnimationFrame'' for best performance. The Canvas 2D API is not directly accessible from WebAssembly, so we will ask the compiler to generate JavaScript code on the relevant sections.
 
@@ -112,12 +112,12 @@ We have created a new ```Graphics``` class and tagged it using the ```[[cheerp::
 
 Compile this new code like we did before and refresh the browser tab, you should now see something like this:
 
-<img src="{{site.baseurl}}/tutorials/tutorial_1/pong2/pong2.png" width="600px">
+<img src="tutorials/tutorial_1/pong2/pong2.png" width="600px">
 
 Great stuff.
 
 # Drawing on the Canvas
-Source code: [pong.cpp]({{site.baseurl}}/tutorials/tutorial_1/pong3/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong3/pong.html).
+Source code: [pong.cpp](tutorials/tutorial_1/pong3/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong3/pong.html).
 
 Let's get started on our game. We will now focus on drawing the paddle.
 
@@ -176,12 +176,12 @@ The class has some basic properties and a render function which then delegates t
 We now need an instance of the Platform object, let’s put it in the global scope for convenience, and also add a top level function to handle the main loop of the application. This function will clear the background and the render the platform.
 
 Let's recompile, and the result should look like this:
-<img src="{{site.baseurl}}/tutorials/tutorial_1/pong3/pong3.png" width="600px">
+<img src="tutorials/tutorial_1/pong3/pong3.png" width="600px">
 
 Looking good.
 
 # Animation and Keyboard events
-Source code: [pong.cpp]({{site.baseurl}}/tutorials/tutorial_1/pong4/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong4/pong.html).
+Source code: [pong.cpp](tutorials/tutorial_1/pong4/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong4/pong.html).
 
 We now need to be able to move the platform around. We will add a ```keydown``` event handler for this purpose. Since it’s a DOM interaction, this code will be tagged as ````genericjs```, but it will update the values of the ```Platform``` object which is compiled to WebAssembly.
 
@@ -212,12 +212,12 @@ void Graphics::keyDownHandler(client::KeyboardEvent* e)
 ```
 
 You should now be able to move the paddle around like this:
-<img src="{{site.baseurl}}/tutorials/tutorial_1/pong4/pong4.gif" width="600px">
+<img src="tutorials/tutorial_1/pong4/pong4.gif" width="600px">
 
 Wow.
 
 # Final steps
-Source code: [pong.cpp]({{site.baseurl}}/tutorials/tutorial_1/pong5/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong5/pong.html).
+Source code: [pong.cpp](tutorials/tutorial_1/pong5/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong5/pong.html).
 
 We'll now focus on the ball. We will create a ```Ball``` class, including a basic physical model of position and velocity. We will keep this class in WebAssembly, so no need for a ``[[cheerp::genericjs]]`` tag.
 
@@ -288,7 +288,7 @@ void mainLoop()
 ```
 
 And that should be it! The game should look like this:
-<img src="{{site.baseurl}}/tutorials/tutorial_1/pong5/pong5.gif" width="600px">
+<img src="tutorials/tutorial_1/pong5/pong5.gif" width="600px">
 
 Not too bad!
 
