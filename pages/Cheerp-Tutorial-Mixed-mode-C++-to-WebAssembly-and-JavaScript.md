@@ -130,7 +130,7 @@ class Platform
 {
 private:
     	int x;
-    	int h;
+    	int y;
     	int width;
     	int height;
 public:
@@ -151,11 +151,11 @@ public:
     	}
     	int getHeight() const
     	{
-            	return width;
+            	return height;
     	}
     	void render() const
     	{
-            	Graphics::drawRect(w, y, width, height, 0xffffff);
+            	Graphics::drawRect(x, y, width, height, 0xffffff);
     	}                                 	 
 };
 ```
@@ -163,17 +163,17 @@ public:
 The class has some basic properties and a render function which then delegates the actual rendering to the ```Graphics``` class since on the WebAssembly side we don’t have access to the DOM. Let’s add the drawRect function to the Graphics class:
 
 ```C++
-    	static void drawRect(int w, int y, int width, int height, int rgb)
+    	static void drawRect(int x, int y, int width, int height, int rgb)
     	{
             	int r = rgb&0xff;
             	int g = (rgb>>8)&0xff;
             	int b = (rgb>>16)&0xff;
-            	canvasCtx->set_fillStyle(client::String("").concat("rgb("r, ",", g, ",", b, ")"));
+            	canvasCtx->set_fillStyle(client::String("").concat("rgb(r", ",", g, ",", b, ")"));
             	canvasCtx->fillRect(x, y, width, height);
     	}
 ```
 
-We now need an instance of the Platform object, let’s put it in the global scope for convenience, and also add a top level function to handle the main loop of the application. This function will clear the background and the render the platform.
+We now need an instance of the Platform object, let’s put it in the global scope for convenience, and also add a top level function to handle the main loop of the application. This function will clear the background and then render the platform.
 
 Let's recompile, and the result should look like this:
 <img src="tutorials/tutorial_1/pong3/pong3.png" width="600px">
