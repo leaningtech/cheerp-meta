@@ -37,6 +37,7 @@ git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-libs
 
 ```bash
 cd cheerp-compiler
+sed -i '13a\  llvm-ar' llvm/CheerpCmakeConf.cmake
 cmake -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
 ninja -C build -j4
 ninja -C build install
@@ -44,7 +45,7 @@ cd ..
 ```
 
 By default Cheerp will be installed in `/opt/cheerp`, with the main executable at `/opt/cheerp/bin/clang++`.
-If you need write privileges to `/opt/cheerp`, then prepend all install commands with `sudo`.
+If you need write privileges to `/opt/cheerp`, then prepend all install commands with `sudo`. The script `../build-bc-libs.sh` also needs to be run with `sudo`.
 
 
 ### Build Cheerp/2: utilities and libraries, stable version
@@ -187,6 +188,9 @@ int main()
 
 ```/opt/cheerp/bin/clang++ example.cpp -o cheerp_example.js -O3 && node cheerp_example.js```
 Should compile and execute the relevant file.
+
+Warning: if using Cheerp 2.7 and node 18, you need to call `node` with the option `--no-experimental-fetch`:
+```/opt/cheerp/bin/clang++ example.cpp -o cheerp_example.js -O3 && node --no-experimental-fetch cheerp_example.js```
 
 
 
