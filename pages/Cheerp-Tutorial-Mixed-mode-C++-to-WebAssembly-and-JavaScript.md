@@ -173,7 +173,39 @@ The class has some basic properties and a render function which then delegates t
     	}
 ```
 
-We now need an instance of the Platform object, let’s put it in the global scope for convenience, and also add a top level function to handle the main loop of the application. This function will clear the background and then render the platform.
+We now need an instance of the Platform object, let’s put it in the global scope for convenience, and also add a top level function ```mainLoop``` to handle the main loop of the application. This function will clear the background and then render the platform:
+
+```C++
+// Define a global instance for the platform object. A more serious game
+// would manage these objects dynamically
+Platform platform(185, 380, 30, 7);
+
+void mainLoop()
+{
+    // Reset the background to black
+    Graphics::drawRect(0, 0, 400, 400, 0x000000);
+    // Draw the platform
+    platform.render();
+}
+```
+
+Lastly, we need to add an handler for drawing an animation in our ```Graphics``` class. The browser will call the handler in sync with the display refresh rate, which generally is at 60 fps.
+
+```C++
+private:
+        // This method is the handler for requestAnimationFrame. The browser will call this
+        // in sync with its graphics loop, usually at 60 fps.
+        static void rafHandler()
+        {
+                mainLoop();
+                client::requestAnimationFrame(cheerp::Callback(rafHandler));
+        }
+```
+
+We then need to call the handler one first time in ```Graphics::initializeCanvas```:
+```C++
+                client::requestAnimationFrame(cheerp::Callback(rafHandler));
+```
 
 Let's recompile, and the result should look like this:
 <img src="tutorials/tutorial_1/pong3/pong3.png" width="600px">
@@ -183,7 +215,7 @@ Looking good.
 # Animation and Keyboard events
 Source code: [pong.cpp](tutorials/tutorial_1/pong4/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong4/pong.html).
 
-We now need to be able to move the platform around. We will add a ```keydown``` event handler for this purpose. Since it’s a DOM interaction, this code will be tagged as ````genericjs```, but it will update the values of the ```Platform``` object which is compiled to WebAssembly.
+We now need to be able to move the platform around. We will add a ```keydown``` event handler for this purpose. Since it’s a DOM interaction, this code will be tagged as ```genericjs```, but it will update the values of the ```Platform``` object which is compiled to WebAssembly.
 
 Let's add two new methods to ``Platform``:
 
