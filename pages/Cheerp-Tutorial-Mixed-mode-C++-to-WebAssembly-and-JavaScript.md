@@ -222,11 +222,11 @@ Let's add two new methods to ``Platform``:
 ```C++
     	void moveLeft()
     	{
-            	x -= 3;
+            x -= 5;
     	}
     	void moveRight()
     	{
-            	x += 3;
+            x += 5;
     	}
 
 ```
@@ -238,9 +238,15 @@ void Graphics::keyDownHandler(client::KeyboardEvent* e)
 {
     	if(e->get_keyCode() == 37)
             	platform.moveLeft();
-    	else
+    	else if(e->get_keyCode() == 39)
             	platform.moveRight();
 }
+```
+
+Let's also register an ```EventListener``` in ```Graphics::initializeCanvas```.
+
+```C++
+    			client::document.addEventListener("keydown", cheerp::Callback(keyDownHandler));
 ```
 
 You should now be able to move the paddle around like this:
@@ -297,7 +303,28 @@ public:
 };
 ```
 
-The ```Ball``` class has methods to update its position, check for collisions and for rendering. 
+The ```Ball``` class has methods to update its position, check for collisions and for rendering.
+
+To visualize our ball on screen we need to implement ```Graphics::drawCircle```:
+
+```C++
+        static void drawCircle(int x, int y, int radius, int rgb)
+        {
+                int r = rgb&0xff;
+                int g = (rgb>>8)&0xff;
+                int b = (rgb>>16)&0xff;
+                canvasCtx->set_fillStyle(client::String("").concat("rgb(", r, ",", g, ",", b, ")"));
+                canvasCtx->beginPath();
+                canvasCtx->arc(x,y,radius,0,2*M_PI);
+                canvasCtx->fill();
+        }
+```
+
+And, as with ```Platform```, instantiate a ```Ball``` object in the global scope.
+
+```C++
+Ball ball(200, 200, 2, -2);
+```
 
 We will now expand the ```mainLoop``` method to call them in sequence. ```Ball::collide``` also checks if the ball has gone past the bottom of the screen, which is our losing condition, and ```mainLoop``` is going to report that by drawing some text.
 
