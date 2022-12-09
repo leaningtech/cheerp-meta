@@ -106,7 +106,7 @@ cd cheerp
 export CHEERP_SRC=$PWD
 git clone https://github.com/leaningtech/cheerp-compiler
 git clone https://github.com/leaningtech/cheerp-utils
-git clone https://github.com/leaningtech/cheerp-newlib
+git clone https://github.com/leaningtech/cheerp-musl
 git clone https://github.com/leaningtech/cheerp-libs
 ```
 
@@ -135,14 +135,14 @@ cd ..
 cd cheerp-musl
 mkdir build_genericjs
 cd build_genericjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp --with-malloc=oldmalloc
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
 make clean
 make -j8
 make install
 cd ..
 mkdir build_asmjs
 cd build_asmjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp --with-malloc=oldmalloc
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
 make clean
 make -j8
 make install
