@@ -35,5 +35,5 @@ If you are new to Cheerp, go [here](./Getting-Started) for more information on h
 # Support
 
 For support on Cheerp RPM packages or Cheerp in general, please refer to our two main channels:
-1. [Cheerp Gitter channel](https://gitter.im/leaningtech/cheerp)
+1. [Cheerp Discord channel](https://discord.leaningtech.com)
 2. [Cheerp GitHub Issue Tracking](https://github.com/leaningtech/cheerp-meta/issues)

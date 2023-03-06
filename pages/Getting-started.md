@@ -121,4 +121,4 @@ You can also try Cheerp without installation thanks to this [Cheerp playground](
 Bugs and Questions
 ------
 
-You can get in touch with us using our [Gitter chat](https://gitter.im/leaningtech/cheerp), or by filing a bug on our [Issue tracker](https://github.com/leaningtech/cheerp-meta/issues).
+You can get in touch with us using our [Discord chat](https://discord.leaningtech.com), or by filing a bug on our [Issue tracker](https://github.com/leaningtech/cheerp-meta/issues).
