@@ -2,18 +2,18 @@
 title: Cheerp - the C/C++ compiler for Web applications
 ---
 
-[![Gitter chat](https://badges.gitter.im/leaningtech/cheerp.svg)](https://gitter.im/leaningtech/cheerp)
+[![Discord chat](https://img.shields.io/discord/988743885121548329)](https://discord.leaningtech.com)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
-[![Latest version](https://img.shields.io/badge/cheerp-2.7-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7-brightgreen.svg)](Changelog)
+[![Latest version](https://img.shields.io/badge/cheerp-3.0-brightgreen.svg)](https://leaningtech.com/cheerp/#download)
 
 Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code to WebAssembly and JavaScript.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-2.7-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-2.7-brightgreen.svg)](Changelog)
+Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-3.0-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-3.0-brightgreen.svg)](Changelog)
 
 Main project link: [https://leaningtech.com/cheerp/](https://leaningtech.com/cheerp/)
 
 This repository is the main reference for documentation, issue tracking, and release notes.
-The main component is on Github: [cheerp-compiler](https://github.com/leaningtech/cheerp-compiler), while other repositories are at [cheerp-newlib](https://github.com/leaningtech/cheerp-newlib), [cheerp-utils](https://github.com/leaningtech/cheerp-utils) and [cheerp-libs](https://github.com/leaningtech/cheerp-libs)
+The main component is on Github: [cheerp-compiler](https://github.com/leaningtech/cheerp-compiler), while other repositories are at [cheerp-musl](https://github.com/leaningtech/cheerp-musl), [cheerp-utils](https://github.com/leaningtech/cheerp-utils) and [cheerp-libs](https://github.com/leaningtech/cheerp-libs)
 
 What is Cheerp
 -----
@@ -33,12 +33,12 @@ Cheerp enables C/C++ code to be compiled to a combination of WebAssembly and Jav
 2. Allows to compile a single code base into a combination of WebAssembly and JavaScript by (optionally) tagging portions of the code with ```[[cheerp::genericjs]]``` and ```[[cheerp::wasm]]```.
 3. Generates smaller WebAssembly outputs.
 
-Cheerp is open-source software and is free to use for GPLv2 projects. Non-copyleft commercial licenses, commercial support and consulting packages are available from Leaning Technologies.
+Cheerp is open-source software and is free to use, inclucing for commercial projects. Commercial support and consulting packages are available from Leaning Technologies.
 
 Get started
 ------
 
-First time user? We recommend following the [Getting started](https://docs.leaningtech.com/cheerp/Getting-started#install) page, that will guide though this steps:
+First time user? We recommend following the [Getting started](https://docs.leaningtech.com/cheerp/Getting-started#install) page, that will guide though these steps:
 + [Install](https://docs.leaningtech.com/cheerp/Getting-started#install "Install")
 + [Cheerp basics](https://docs.leaningtech.com/cheerp/Getting-started#cheerp-basics "Cheerp basics")
 + [Ready?](https://docs.leaningtech.com/cheerp/Getting-started#ready "Ready?")
@@ -50,4 +50,4 @@ Or look at the sidebar to find lots of useful materials
 Bugs and Questions
 ------
 
-You can get in touch with us using our [Gitter chat](https://gitter.im/leaningtech/cheerp), or by filing a bug on our [Issue tracker](https://github.com/leaningtech/cheerp-meta/issues).
+You can get in touch with us using [Discord](https://discord.leaningtech.com), or by filing a bug on our [Issue tracker](https://github.com/leaningtech/cheerp-meta/issues).

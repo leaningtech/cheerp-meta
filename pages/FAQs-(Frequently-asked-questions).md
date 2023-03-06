@@ -19,11 +19,8 @@ cheerp currently supports most of C++ features. While we try very hard to have a
 
 ## Is cheerp free software? Or is it proprietary?
 
-Cheerp is 100% free software. The cheerp compiler itself is licensed under the University of Illinois/NCSA license, like the LLVM and clang projects the cheerp compiler is based on. Cheerp headers and libraries which provide access to browser and other functionalities both at low and high level are released under the GPLv2+ license.
+Cheerp is 100% free software. The cheerp compiler, headers and libraries are licensed under the Apache License v2.0 with LLVM Exceptions license, same as the upstream LLVM/Clang projects. The musl implementation of the C library is released under the MIT licence. Both licenses are permissive and allow Cheerp to be used for both commercial and non-commercial projects with no strings attached.
 
-## Should I release my code as GPL if I use cheerp?
+## Should I release my code if I use cheerp?
 
-There are two cases:
-
-* If you don't want to release the source code of your programs, Leaning Technologies Ltd (the company behind the development of Cheerp) offers proprietary-friendly commercial licenses and support. Please visit http://leaningtech.com for more infomation.
-* If you are using our free GPL version you should release the code. You are using GPL headers and linking with GPL libraries so your code is considered derived work of cheerp. 
+No. Neither the Apache License nor the MIT license are "copyleft". You are under no obligation of releasing any of your code if you use Cheerp.

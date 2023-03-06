@@ -3,7 +3,7 @@ title: Linux build instructions
 ---
 
 Cheerp is composed of multiple components, they are somewhat interdependent and should be built together.
-The build instructions are provided for the stable release, Cheerp 2.7, or for the latest / development branch.
+The build instructions are provided for the stable release, Cheerp 3.0, or for the latest / development branch.
 
 [Scroll to bottom](https://docs.leaningtech.com/cheerp/Linux-build-instructions.html#build-latest-version) for the instruction for the latest version, or keep reading to build stable.
 
@@ -17,7 +17,7 @@ apt-get install cmake python3 python3-distutils ninja-build gcc lld git
 ```
 
 
-## Build stable version, Cheerp 2.7
+## Build stable version, Cheerp 3.0
 
 ### Get the sources, stable version
 
@@ -27,10 +27,10 @@ You need to get all the sources first. Please define the `CHEERP_SRC` environmen
 mkdir cheerp
 cd cheerp
 export CHEERP_SRC=$PWD
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-compiler
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-utils
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-newlib
-git clone --branch cheerp-2.7 https://github.com/leaningtech/cheerp-libs
+git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-compiler
+git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-utils
+git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-musl
+git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-libs
 ```
 
 ### Build Cheerp/1: compiler, stable version
@@ -56,21 +56,20 @@ cmake -B build -DCMAKE_INSTALL_PREFIX=/opt/cheerp .
 make -C build install
 cd ..
 
-cd cheerp-newlib/newlib
+cd cheerp-musl
 mkdir build_genericjs
 cd build_genericjs
-../configure --host=cheerp-genericjs --with-cxx-headers=$PWD/../../cheerp-compiler/libcxx/include --prefix=/opt/cheerp --enable-newlib-io-long-long --enable-newlib-iconv --enable-newlib-iconv-encodings=utf-16,utf-8,ucs_2 --enable-newlib-mb --enable-newlib-nano-formatted-io AR=/opt/cheerp/bin/llvm-ar RANLIB="/opt/cheerp/bin/llvm-ar s"
-make
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
+make clean
+make -j8
 make install
-../build-bc-libs.sh genericjs
 cd ..
 mkdir build_asmjs
 cd build_asmjs
-../configure --host=cheerp-asmjs --with-cxx-headers=$PWD/../../cheerp-compiler/libcxx/include --prefix=/opt/cheerp --enable-newlib-io-long-long --enable-newlib-iconv --enable-newlib-iconv-encodings=utf-16,utf-8,ucs_2 --enable-newlib-mb --enable-newlib-nano-formatted-io AR=/opt/cheerp/bin/llvm-ar RANLIB="/opt/cheerp/bin/llvm-ar s"
-make
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
+make clean
+make -j8
 make install
-../build-bc-libs.sh asmjs
-cd ..
 cd ../..
 
 cd cheerp-compiler
@@ -188,11 +187,6 @@ int main()
 
 ```/opt/cheerp/bin/clang++ example.cpp -o cheerp_example.js -O3 && node cheerp_example.js```
 Should compile and execute the relevant file.
-
-Warning: if using Cheerp 2.7 and node 18, you need to call `node` with the option `--no-experimental-fetch`:
-```/opt/cheerp/bin/clang++ example.cpp -o cheerp_example.js -O3 && node --no-experimental-fetch cheerp_example.js```
-
-
 
 ## Cheerp unit tests
 

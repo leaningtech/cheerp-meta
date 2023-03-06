@@ -2,6 +2,19 @@
 title: Changelog
 ---
 
+Cheerp 3.0 - March 6th, 2023
+
+	* Rebase on top of LLVM/Clang 16.0
+	* [[cheerp::jsexport]] support for classes compiled to WebAssembly
+	* WebAssembly SIMD support
+	* CFGStackifier improvements
+	* PartialExecuter improvements
+	* Various performance improvements
+	* Various robustness improvements
+	* Switch to new LLVM PassManager
+	* Use musl + dlmalloc as libc
+	* Progress towards opaque pointer support
+
 Cheerp 2.7 - March 29th, 2022:
 
 	* Rebase on top of LLVM/Clang 14.0

@@ -208,7 +208,3 @@ How to get started with Cheerp generated ES6 Modules?
 
 If you project is already compiled with Cheerp, it should be just a matter of adding the command line flag `-cheerp-make-module=es6` and then calling the instantiation function / integrating the module in your WebPage.
 
-Questions or Feedback ?
----
-
-Support for ES6 modules is stable in Cheerp 2.7. Any problem / clarification or suggestion on how to improve this to better serve your project could be done via our support channels(reach us via email or [Gitter](https://gitter.im/leaningtech/cheerp)) or [opening an Issue on GitHub](https://github.com/leaningtech/cheerp-meta/issues).
