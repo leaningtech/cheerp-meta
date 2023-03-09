@@ -14,7 +14,7 @@ To add it to your system you have two options:
 #### Manually edit sources.list (works on Debian testing / stretch)
 add the following line to /etc/apt/sources.list
 ```
-deb http://ppa.launchpad.net/leaningtech-dev/cheerp-ppa/ubuntu xenial main 
+deb http://ppa.launchpad.net/leaningtech-dev/cheerp-ppa/ubuntu focal main
 ```
 and import the key for apt with the command
 ```
