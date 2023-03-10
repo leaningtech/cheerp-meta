@@ -1,16 +1,15 @@
 ---
-title: Exceptions (C++ and JS) in Cheerp
+title: Exceptions (C++ and JavaScript) in Cheerp
 ---
 
-Cheerp supports C++ exceptions, enabled when passing '-fexceptions' to the compiler.
+Cheerp supports C++ exceptions, enabled when passing `-fexceptions` to the compiler. Cheerp also supports dealing with JavaScript exceptions, whether catching JavaScript exceptions raised by external JavaScript code, or throwing JavaScript exceptions from C++ code.
 
-
-Small clarification to start, there is the logic encoded in the C++ side (than will then be codegenerated as a mix of JavaScript and WebAssembly) and 'external' logic, either as external JavaScript libraries or anyhow included browser side (= not compiled in the same Cheerp project).
-
-
-'Internal' exception catched by C++ code
+'Internal' C++ exception caught by C++ code
 ---
 
+This is the simplest case of using exceptions in Cheerp. In this case, your C++ code behaves in the same way that it would do when compiling natively, and any exceptions-enabled C++ code will work out of the box.
+
+Example: 
 ```c++
 #include <iostream>
 using namespace std;
@@ -28,14 +27,14 @@ int main () {
 }
 ```
 
-This works the same regardless of whether code will be codegenerated as JavaScript or WebAssembly, as long as both sides are present on the C++ side it will follow the 'regular' rules for C++ exceptions, (eg. catch(...) included).
-This is the simpler case, you basically do as you would do while compilign natively, and any exceptions-enabled code should work out of the box.
+C++ exceptions caught in C++ work as expected, whether compiling to WebAssembly, JavaScript, or both. As long as both sides are present on the C++ side it will follow the 'regular' rules for C++ exceptions, (eg. catch(...) included).
 
-
-
-'External' exception catched by C++ code
+'External' exception caught by C++ code
 ---
 
+In this case, C++ code invokes some JavaScript method that, in turn, generates an exception. The exception is caught in C++.
+
+Example:
 ```c++
 #include <iostream>
 #include <cheerp/jsexception.h>
@@ -62,20 +61,18 @@ int main () {
 }
 ```
 
-Here say that we don't implement someUndefinedExternalFunc, then executing it will throw a (JavaScript) Error, that can be catched using the cheerp-specific syntax:
+Here say that we don't implement `someUndefinedExternalFunc`. Executing it will throw a JavaScript Error, that can be caught using the cheerp-specific syntax:
 
 `catch (cheerp::JSException& ex)`
 
-Note that using the throw value requires: calling get() + casting to the appropriate value.
-Here we casted to a pointer to client::Error), but see for example here: [cheerp-utils/tests](https://github.com/leaningtech/cheerp-utils/blob/0b3bce1a73be2eec5437df3fa4747f954863c0c7/tests/unit/exceptions/test1.cpp#L381) for catching an integer value.
+Note that using the throw value requires: calling `get()` + casting to the appropriate value.
 
-
-
+Here we casted to a pointer to `client::Error`, but see for example here: [cheerp-utils/tests](https://github.com/leaningtech/cheerp-utils/blob/0b3bce1a73be2eec5437df3fa4747f954863c0c7/tests/unit/exceptions/test1.cpp#L381) for catching an integer value.
 
 'Internal' (C++) exception catched by external JavaScript code
 ---
 
-If your code (eg. a jsexported function) let a C++ exception bubble up, you can still catch it on the JavaScript side by wrapping the call of the relevant jsexported-method in a try {} catch {} statement. This is 'just' regular JavaScript.
+If your code (eg. a `jsexport`ed function) lets a C++ exception bubble up, you can still catch it on the JavaScript side by wrapping the call of the relevant jsexported-method in a `try {} catch {}` statement. This is 'just' regular JavaScript.
 
 ```c++
 [[cheerp::jsexport]]
