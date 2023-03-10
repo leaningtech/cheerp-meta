@@ -2,11 +2,7 @@
 title: Ubuntu & Debian installation
 ---
 
-Pre-built packages for Debian/Ubuntu are provided in our PPA
-
-https://launchpad.net/~leaningtech-dev/+archive/ubuntu/cheerp-ppa
-
-For other Linux distributions, please build from source, see [Linux build](Linux-build-instructions).
+Pre-built packages for Debian/Ubuntu are provided in our [PPA](https://launchpad.net/~leaningtech-dev/+archive/ubuntu/cheerp-ppa). For other Linux distributions, please build from source, see [Linux build](Linux-build-instructions).
 
 ## Adding the repository
 To add it to your system you have two options:
