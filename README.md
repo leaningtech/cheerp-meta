@@ -6,14 +6,13 @@ title: Cheerp - the C/C++ compiler for Web applications
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
 [![Latest version](https://img.shields.io/badge/cheerp-3.0-brightgreen.svg)](https://leaningtech.com/cheerp/#download)
 
-Cheerp is an open-source, commercial C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code to WebAssembly and JavaScript.
+Cheerp is an open-source, permissively licensed, enterprise-grade C/C++ compiler for Web applications. It allows to compile virtually any C/C++ code to WebAssembly and JavaScript.
 
-Download latest version: [![Latest version](https://img.shields.io/badge/cheerp-3.0-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-3.0-brightgreen.svg)](Changelog)
+Download the latest version of Cheerp: [![Latest version](https://img.shields.io/badge/cheerp-3.0-brightgreen.svg)](https://leaningtech.com/cheerp/#download)  [![Latest version changelog](https://img.shields.io/badge/Changelog-3.0-brightgreen.svg)](Changelog)
 
 Main project link: [https://leaningtech.com/cheerp/](https://leaningtech.com/cheerp/)
 
-This repository is the main reference for documentation, issue tracking, and release notes.
-The main component is on Github: [cheerp-compiler](https://github.com/leaningtech/cheerp-compiler), while other repositories are at [cheerp-musl](https://github.com/leaningtech/cheerp-musl), [cheerp-utils](https://github.com/leaningtech/cheerp-utils) and [cheerp-libs](https://github.com/leaningtech/cheerp-libs)
+This repository is the main reference for documentation, issue tracking, and release notes of Cheerp. The main component of Cheerp, i.e. the Cheerp compiler, can be found on Github: [cheerp-compiler](https://github.com/leaningtech/cheerp-compiler), while other repositories are at [cheerp-musl](https://github.com/leaningtech/cheerp-musl), [cheerp-utils](https://github.com/leaningtech/cheerp-utils) and [cheerp-libs](https://github.com/leaningtech/cheerp-libs)
 
 What is Cheerp
 -----
