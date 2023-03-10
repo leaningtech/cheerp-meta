@@ -17,22 +17,23 @@ This repository is the main reference for documentation, issue tracking, and rel
 What is Cheerp
 -----
 
-Cheerp is a C/C++ compiler for the Web, based and integrated into the LLVM/clang infrastructure, and featuring numerous custom optimisation steps to maximise performance and minimise size of the compiled JavaScript/WebAssembly output. Thanks to this, Cheerp is the best performing, most optimised C++ to WebAssembly compiler available on the market.
+Cheerp is a C/C++ compiler to WebAssembly and JavaScript, based on and integrated into the LLVM/Clang infrastructure, and featuring numerous custom optimisation steps to maximise performance and minimise size of the compiled JavaScript/WebAssembly output. Thanks to this, Cheerp is the best performing, most optimised C++ to WebAssembly compiler available on the market.
 
-Cheerp is used primarily to port existing C/C++ libraries and applications to HTML5, but can also be used to write high-performance Web applications and WebAssembly components from scratch. C/C++ gets optimised and compiled into JavaScript/WebAssembly, and can easily be integrated in a web page.
+Cheerp is used primarily to port existing C/C++ libraries and applications to HTML5, but can also be used to write high-performance Web applications and WebAssembly components from scratch. Using Cheerp, C/C++ code gets compiled into JavaScript/WebAssembly and optimised, with the right JavaScript interfaces being exposed, and can easily be integrated in a web application.
+
+Cheerp is licensed under the "Apache 2.0 License with LLVM exceptions", i.e. the same license of upstream LLVM/Clang. This is a permissive license that allows virtually any use of the software.
 
 ![Diagram of Cheep usage](assets/Diagram_browser.png "Icons from https://github.com/ubuntu/yaru/tree/master/icons, Creative Commons BY-SA 4.0")
 
 What is unique about Cheerp?
 ------
 
-Cheerp enables C/C++ code to be compiled to a combination of WebAssembly and JavaScript (possibly asm.js when targeting legacy browsers). Compared to alternative C/C++ compilers for web applications such as Emscripten, Cheerp:
+Cheerp enables C/C++ code to be compiled to a combination of WebAssembly and JavaScript (or asm.js when targeting legacy browsers). Compared to alternative C/C++ compilers for web applications such as Emscripten, Cheerp:
 
-1. Generates faster WebAssembly code, but can also compile to a JavaScript output with dynamic memory (garbage-collectible output), zero-overhead DOM manipulation and access to WebApis and superior C++-JavaScript interoperability.
+1. Generates more optimized (smaller) WebAssembly code, but can also compile to a JavaScript output with dynamic memory (garbage-collectible output), zero-overhead DOM manipulation and access to Web APIs and superior C++-JavaScript interoperability.
 2. Allows to compile a single code base into a combination of WebAssembly and JavaScript by (optionally) tagging portions of the code with ```[[cheerp::genericjs]]``` and ```[[cheerp::wasm]]```.
-3. Generates smaller WebAssembly outputs.
 
-Cheerp is open-source software and is free to use, inclucing for commercial projects. Commercial support and consulting packages are available from Leaning Technologies.
+Cheerp is free open-source software, actively developed and maintained by Leaning Technologies. Commercial support, feature fast tracking, sponsored developoment and consulting packages are available for Enterprise customers.
 
 Get started
 ------
