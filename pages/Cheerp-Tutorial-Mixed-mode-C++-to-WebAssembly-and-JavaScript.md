@@ -2,7 +2,7 @@
 title: Tutorial - Pong
 ---
 
-This tutorial will guide you through the steps to create a simple game of pong in C++, and compile it to a combination of WebAssembly (game logic) and JavaScript (game graphics) with Cheerp 2.0.
+This tutorial will guide you through the steps to create a simple game of pong in C++, and compile it to a combination of WebAssembly (game logic) and JavaScript (game graphics) with Cheerp 3.0.
 
 # Hello World
 Source code: [pong.cpp](tutorials/tutorial_1/pong1/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong1/pong.html).
@@ -63,7 +63,7 @@ Great! We can now move on to build an Hello World that writes on the Canvas.
 # Hello World (Canvas)
 Source code: [pong.cpp](tutorials/tutorial_1/pong2/pong.cpp). Link to the example: [link](https://oldsite.leaningtech.com/cheerp/examples/pong2/pong.html).
 
-What we will do in this tutorial is keeping all the Canvas manipulation in the JavaScript output, and the rest of the game in WebAssembly. We will be doing our rendering using the Canvas 2D Web API, and we will also use ``requestAnimationFrame'' for best performance. The Canvas 2D API is not directly accessible from WebAssembly, so we will ask the compiler to generate JavaScript code on the relevant sections.
+What we will do in this tutorial is keeping all the Canvas manipulation in the JavaScript output, and the rest of the game in WebAssembly. We will be doing our rendering using the Canvas 2D Web API, and we will also use `requestAnimationFrame` for best performance. The Canvas 2D API is not directly accessible from WebAssembly, so we will ask the compiler to generate JavaScript code on the relevant sections.
 
 Let's have a look a this example:
 
