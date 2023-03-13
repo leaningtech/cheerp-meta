@@ -59,17 +59,17 @@ Free function tagged with ```[[cheerp::genericjs]]``` or ```[[cheerp::wasm]]``` 
 
 ## JSExported class/struct limitations
  * no inheritance
- * the class/struct must have a trivial destructor, which means that all members must have a trivial destructor as well
  * the class/struct needs to have a public constructor
  * the class/struct needs to have at least a non-static jsexported method
- * the class has to be tagged with the ```[[cheerp::genericjs]]``` attribute
  * "promise" and "valueOf" are reserved names
+
+Classes tagged with ```[[cheerp::genericjs]]``` or ```[[cheerp::wasm]]``` (directly or via the ```-target``` option) are both compatible with the ```[[cheerp::jsexport]]``` attribute.
 
 The same restrictions on free functions are also imposed on all JSExported methods.
 
 Some of these restrictions will be relaxed in future releases, but we strive to offer a forward compatible interface, so that a code compiled with the current restrictions will be also valid in future releases.
 
-Requiring that the class has a trivial destructor means that no custom operation can happen within the destructor. This allows to fully rely on the JavaScript garbage collector to clean up the object.
+If you create a JSExported object with `new` in JavaScript, **you are responsible of calling the special `delete()` method at the end of the object lifetime**, to run the destructor and free memory (if the objects resides in linear memory or holds members that do). The same applies whenever the C++ API that you are exporting is handing out the ownership of an object to JavaScript.
 
 Member fields (either static or not) are not JsExported (but you define getter / setter methods).
 
