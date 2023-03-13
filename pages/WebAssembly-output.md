@@ -57,31 +57,4 @@ void webMain()
 # Using cheerp::jsexport in combination with WebAssembly
 
 ```[[cheerp::jexport]]``` makes it possible to expose C++ classes and functions to JavaScript. [(See here for details on jsexport)](JSExport-attribute).
-Free functions can be tagged ```[[cheerp::jsexport]]``` independently of the compilation mode they are tied to (either ```[[cheerp::genericjs]]``` or ```[[cheerp::wasm]]```). For Wasm tagged functions, a wrapper will be exposed on the JavaScript side.
-Classes and structs currently supports only the ```[[cheerp::genericjs]]``` compilation mode, so it should be manually added to each JSExported class/struct. This limitation may be relaxed in the future, but for now this means that code compiled to Wasm needs to be exposed from a _genericjs_ class.
 
-As the loading of the Wasm module must be asynchronous it is also necessary to wait for the completion of the process before using jsexport-ed code. To achieve this Cheerp expose a promise property in every jsexport-ed class and function. The promise can (and should) be used to know when the code is eventually ready to run.
-
-```c++
-class [[cheerp::jsexport]] [[cheerp::genericjs]] JsStruct
-{
-private:
-        float a;
-        int b;
-public:
-        JsStruct(float _a, int _b):a(_a),b(_b)
-        {
-        }
-        void test()
-        {
-                client::console.log("Invoked test");
-        }
-};
-```
-
-```js
-JsStruct.promise.then(function(){
-        var obj = new JsStruct();
-        obj.test();
-});
-```
