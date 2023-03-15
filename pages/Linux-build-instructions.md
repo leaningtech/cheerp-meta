@@ -59,14 +59,14 @@ cd ..
 cd cheerp-musl
 mkdir build_genericjs
 cd build_genericjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp" LD="/opt/cheerp/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
 make clean
 make -j8
 make install
 cd ..
 mkdir build_asmjs
 cd build_asmjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
+RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm" LD="/opt/cheerp/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
 make clean
 make -j8
 make install
