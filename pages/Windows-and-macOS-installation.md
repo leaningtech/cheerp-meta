@@ -9,3 +9,8 @@ Download the latest binary installer executable from [GitHub](https://github.com
 
 # macOS
 Download the DMG image for macOS from from [GitHub](https://github.com/leaningtech/cheerp-meta/releases) and install it by opening the image and drag-and-dropping Cheerp into the `/Applications` directory. Cheerp compiler will be accessible as `/Applications/cheerp/bin/clang++`
+
+The binary is not signed so you may need to run the following to stop Gatekeeper from blocking the executable:
+```shell
+sudo xattr -d com.apple.quarantine /Applications/cheerp/bin/*
+```
