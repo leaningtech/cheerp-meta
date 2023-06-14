@@ -37,7 +37,7 @@ git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-libs
 
 ```bash
 cd cheerp-compiler
-cmake -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
 ninja -C build -j4
 ninja -C build install
 cd ..
@@ -120,7 +120,7 @@ git clone https://github.com/leaningtech/cheerp-libs
 
 ```bash
 cd cheerp-compiler
-cmake -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
 ninja -C build -j4
 ninja -C build install
 cd ..
