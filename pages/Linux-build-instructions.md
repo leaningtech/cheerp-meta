@@ -37,7 +37,6 @@ git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-libs
 
 ```bash
 cd cheerp-compiler
-sed -i '13a\  llvm-ar' llvm/CheerpCmakeConf.cmake
 cmake -S llvm -B build -C llvm/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS=clang -G Ninja
 ninja -C build -j4
 ninja -C build install
@@ -45,7 +44,7 @@ cd ..
 ```
 
 By default Cheerp will be installed in `/opt/cheerp`, with the main executable at `/opt/cheerp/bin/clang++`.
-If you need write privileges to `/opt/cheerp`, then prepend all install commands with `sudo`. The script `../build-bc-libs.sh` also needs to be run with `sudo`.
+If you need write privileges to `/opt/cheerp`, then prepend all install commands with `sudo`.
 
 
 ### Build Cheerp/2: utilities and libraries, stable version
@@ -73,12 +72,13 @@ make install
 cd ../..
 
 cd cheerp-compiler
-cmake -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
 ninja -C build_runtimes_genericjs
-ninja -C build_runtimes_genericjs install
 
-cmake -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
 ninja -C build_runtimes_wasm
+
+ninja -C build_runtimes_genericjs install
 ninja -C build_runtimes_wasm install
 cd ..
 
@@ -86,7 +86,14 @@ cd cheerp-libs
 make -C webgles install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
 make -C wasm install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
 make -C stdlibs install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
-cd ..
+cd system
+cmake -B build_genericjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake .
+cmake --build build_genericjs
+cmake --install build_genericjs
+cmake -B build_asmjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake .
+cmake --build build_asmjs
+cmake --install build_asmjs
+cd ../..
 ```
 
 Now you should have a working Cheerp installation, to test it, follow [here](https://docs.leaningtech.com/cheerp/Linux-build-instructions#hello-world-in-cheerp).
@@ -148,12 +155,13 @@ make install
 cd ../..
 
 cd cheerp-compiler
-cmake -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
 ninja -C build_runtimes_genericjs
-ninja -C build_runtimes_genericjs install
 
-cmake -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
 ninja -C build_runtimes_wasm
+
+ninja -C build_runtimes_genericjs install
 ninja -C build_runtimes_wasm install
 cd ..
 
