@@ -21,12 +21,12 @@ apt-get install cmake python3 python3-distutils ninja-build gcc lld git
 
 ### Get the sources, stable version
 
-You need to get all the sources first. Please define the `CHEERP_SRC` environment variable that will be used in various commands.
+You need to get all the sources first. Please define the `CHEERP_DEST` environment variable that will be used in various commands.
 
 ```bash
 mkdir cheerp
 cd cheerp
-export CHEERP_SRC=$PWD
+export CHEERP_DEST=/opt/cheerp
 git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-compiler
 git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-utils
 git clone --branch cheerp-3.0 https://github.com/leaningtech/cheerp-musl
@@ -51,31 +51,31 @@ If you need write privileges to `/opt/cheerp`, then prepend all install commands
 
 ```bash
 cd cheerp-utils
-cmake -B build -DCMAKE_INSTALL_PREFIX=/opt/cheerp .
+cmake -B build -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} .
 make -C build install
 cd ..
 
 cd cheerp-musl
 mkdir build_genericjs
 cd build_genericjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp" LD="/opt/cheerp/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
+RANLIB="${CHEERP_DEST}/bin/llvm-ar s" AR="${CHEERP_DEST}/bin/llvm-ar"  CC="${CHEERP_DEST}/bin/clang -target cheerp" LD="${CHEERP_DEST}/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp --disable-shared --prefix=${CHEERP_DEST}
 make clean
 make -j8
 make install
 cd ..
 mkdir build_asmjs
 cd build_asmjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm" LD="/opt/cheerp/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
+RANLIB="${CHEERP_DEST}/bin/llvm-ar s" AR="${CHEERP_DEST}/bin/llvm-ar"  CC="${CHEERP_DEST}/bin/clang -target cheerp-wasm" LD="${CHEERP_DEST}/bin/llvm-link" CFLAGS="-Wno-int-conversion" ../configure --target=cheerp-wasm --disable-shared --prefix=${CHEERP_DEST}
 make clean
 make -j8
 make install
 cd ../..
 
 cd cheerp-compiler
-cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="${CHEERP_DEST}/share/cmake/Modules/CheerpToolchain.cmake"
 ninja -C build_runtimes_genericjs
 
-cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="${CHEERP_DEST}/share/cmake/Modules/CheerpWasmToolchain.cmake"
 ninja -C build_runtimes_wasm
 
 ninja -C build_runtimes_genericjs install
@@ -83,14 +83,14 @@ ninja -C build_runtimes_wasm install
 cd ..
 
 cd cheerp-libs
-make -C webgles install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
-make -C wasm install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
-make -C stdlibs install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
+make -C webgles install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
+make -C wasm install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
+make -C stdlibs install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
 cd system
-cmake -B build_genericjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake .
+cmake -B build_genericjs -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -DCMAKE_TOOLCHAIN_FILE=${CHEERP_DEST}/share/cmake/Modules/CheerpToolchain.cmake .
 cmake --build build_genericjs
 cmake --install build_genericjs
-cmake -B build_asmjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake .
+cmake -B build_asmjs -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -DCMAKE_TOOLCHAIN_FILE=${CHEERP_DEST}/share/cmake/Modules/CheerpWasmToolchain.cmake .
 cmake --build build_asmjs
 cmake --install build_asmjs
 cd ../..
@@ -104,12 +104,12 @@ This allows to benefit from the latest develpments and bug fixes, but we reserve
 
 ### Get the sources, latest version
 
-You need to get all the sources first. Please define the `CHEERP_SRC` environment variable that will be used in various commands.
+You need to get all the sources first. Please define the `CHEERP_DEST` environment variable that will be used in various commands.
 
 ```bash
 mkdir cheerp
 cd cheerp
-export CHEERP_SRC=$PWD
+export CHEERP_DEST=/opt/cheerp
 git clone https://github.com/leaningtech/cheerp-compiler
 git clone https://github.com/leaningtech/cheerp-utils
 git clone https://github.com/leaningtech/cheerp-musl
@@ -134,31 +134,31 @@ If you need write privileges to `/opt/cheerp`, then prepend all install commands
 
 ```bash
 cd cheerp-utils
-cmake -B build -DCMAKE_INSTALL_PREFIX=/opt/cheerp .
+cmake -B build -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} .
 make -C build install
 cd ..
 
 cd cheerp-musl
 mkdir build_genericjs
 cd build_genericjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=/opt/cheerp
+RANLIB="${CHEERP_DEST}/bin/llvm-ar s" AR="${CHEERP_DEST}/bin/llvm-ar"  CC="${CHEERP_DEST}/bin/clang -target cheerp -I ${CHEERP_DEST}/lib/clang/15.0.0/include" LD="${CHEERP_DEST}/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp --disable-shared --prefix=${CHEERP_DEST}
 make clean
 make -j8
 make install
 cd ..
 mkdir build_asmjs
 cd build_asmjs
-RANLIB="/opt/cheerp/bin/llvm-ar s" AR="/opt/cheerp/bin/llvm-ar"  CC="/opt/cheerp/bin/clang -target cheerp-wasm -I /opt/cheerp/lib/clang/15.0.0/include" LD="/opt/cheerp/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=/opt/cheerp
+RANLIB="${CHEERP_DEST}/bin/llvm-ar s" AR="${CHEERP_DEST}/bin/llvm-ar"  CC="${CHEERP_DEST}/bin/clang -target cheerp-wasm -I ${CHEERP_DEST}/lib/clang/15.0.0/include" LD="${CHEERP_DEST}/bin/llvm-link" CPPFLAGS="" ../configure --target=cheerp-wasm --disable-shared --prefix=${CHEERP_DEST}
 make clean
 make -j8
 make install
 cd ../..
 
 cd cheerp-compiler
-cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S runtimes -B build_runtimes_genericjs -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="${CHEERP_DEST}/share/cmake/Modules/CheerpToolchain.cmake"
 ninja -C build_runtimes_genericjs
 
-cmake -DCMAKE_INSTALL_PREFIX=/opt/cheerp -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake"
+cmake -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -S runtimes -B build_runtimes_wasm -GNinja -C runtimes/CheerpCmakeConf.cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE="${CHEERP_DEST}/share/cmake/Modules/CheerpWasmToolchain.cmake"
 ninja -C build_runtimes_wasm
 
 ninja -C build_runtimes_genericjs install
@@ -166,14 +166,14 @@ ninja -C build_runtimes_wasm install
 cd ..
 
 cd cheerp-libs
-make -C webgles install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
-make -C wasm install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
-make -C stdlibs install INSTALL_PREFIX=/opt/cheerp CHEERP_PREFIX=/opt/cheerp
+make -C webgles install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
+make -C wasm install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
+make -C stdlibs install INSTALL_PREFIX=${CHEERP_DEST} CHEERP_PREFIX=${CHEERP_DEST}
 cd system
-cmake -B build_genericjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpToolchain.cmake .
+cmake -B build_genericjs -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -DCMAKE_TOOLCHAIN_FILE=${CHEERP_DEST}/share/cmake/Modules/CheerpToolchain.cmake .
 cmake --build build_genericjs
 cmake --install build_genericjs
-cmake -B build_asmjs -DCMAKE_INSTALL_PREFIX=/opt/cheerp -DCMAKE_TOOLCHAIN_FILE=/opt/cheerp/share/cmake/Modules/CheerpWasmToolchain.cmake .
+cmake -B build_asmjs -DCMAKE_INSTALL_PREFIX=${CHEERP_DEST} -DCMAKE_TOOLCHAIN_FILE=${CHEERP_DEST}/share/cmake/Modules/CheerpWasmToolchain.cmake .
 cmake --build build_asmjs
 cmake --install build_asmjs
 cd ../..
