@@ -1,6 +1,4 @@
----
-title: Cheerp - the C/C++ compiler for Web applications
----
+<h1><img src="assets/logotype.svg" alt="Cheerp" height="96"></h1>
 
 [![Discord chat](https://img.shields.io/discord/988743885121548329)](https://discord.leaningtech.com)
 [![GitHub Issues](https://img.shields.io/github/issues/leaningtech/cheerp-meta.svg)](https://github.com/leaningtech/cheerp-meta/issues)
