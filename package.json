@@ -1,0 +1,26 @@
+{
+  "name": "cheerp",
+  "version": "3.0.0-rc.1",
+  "bin": "bin/cheerp",
+  "description": "The C/C++ compiler for web applications",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaningtech/cheerp-meta.git"
+  },
+  "keywords": [
+    "webassembly",
+    "toolchain",
+    "c++",
+    "c",
+    "compiler",
+    "wasm",
+    "leaningtech"
+  ],
+  "author": "Leaning Technologies",
+  "license": "Apache-2.0",
+  "bugs": "https://github.com/leaningtech/cheerp-meta/issues",
+  "homepage": "https://leaningtech.com/cheerp"
+}
