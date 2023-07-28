@@ -1,0 +1,37 @@
+{
+  "name": "cheerp",
+  "version": "3.0.0-rc.1",
+  "bin": "bin/cheerp.mjs",
+  "main": "index.mjs",
+  "types": "index.d.ts",
+  "description": "The C/C++ compiler for web applications",
+  "scripts": {
+    "postinstall": "node postinstall.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaningtech/cheerp-meta.git"
+  },
+  "keywords": [
+    "webassembly",
+    "toolchain",
+    "c++",
+    "c",
+    "compiler",
+    "wasm",
+    "leaningtech"
+  ],
+  "author": "Leaning Technologies",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "bugs": "https://github.com/leaningtech/cheerp-meta/issues",
+  "homepage": "https://leaningtech.com/cheerp",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "execa": "^7.2.0"
+  },
+  "optionalDependencies": {
+    "@leaningtech/cheerp-darwin-x64": "3.0.0-rc.1"
+  }
+}

@@ -1,8 +1,0 @@
-{
-	"darwin": {
-		"x64": {
-			"package": "@leaningtech/darwin-x64",
-			"bin": "cheerp"
-		}	
-	}
-}

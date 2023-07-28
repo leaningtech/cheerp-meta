@@ -1,1 +1,9 @@
 node_modules
+.DS_Store
+*.log
+
+# Downloaded Cheerp toolchains
+/packages/cheerp-*-*/cheerp
+*.dmg
+*.zip
+*.tar.gz
