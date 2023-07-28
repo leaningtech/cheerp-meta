@@ -16,7 +16,7 @@ async function importCheerp() {
       throw error;
     }
     return {
-      path: platform === "win32" ? "C:\\cheerp\\" : "/opt/cheerp",
+      path: platform === "win32" ? "C:\\cheerp\\" : "/opt/cheerp/",
     };
   }
 }
