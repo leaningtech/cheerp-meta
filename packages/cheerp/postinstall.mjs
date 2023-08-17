@@ -9,7 +9,9 @@ try {
   const { stdout } = await execa(resolve(dirname, "bin", "cheerp.mjs"), [
     "--version",
   ]);
-  if (!stdout.startsWith("Cheerp 3.0")) {
+  if (!stdout.startsWith("Cheerp ")) {
+    console.error(`Unexpected cheerp version: ${stdout}`);
+    process.exit(126);
   }
 } catch (error) {
   if (error.exitCode === 127) {

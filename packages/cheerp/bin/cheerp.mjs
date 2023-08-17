@@ -14,7 +14,7 @@ const { error, status } = spawnSync(binPath, process.argv.slice(2), {
 if (error) {
   if (error.code === "ENOENT") {
     console.error(
-      `executable not found: ${binPath}. please install Cheerp to "${path}": https://docs.leaningtech.com/cheerp/Getting-started`,
+      `executable not found: ${binPath}. please install Cheerp to "${path}": https://labs.leaningtech.com/cheerp/installation`,
     );
     process.exit(127);
   }

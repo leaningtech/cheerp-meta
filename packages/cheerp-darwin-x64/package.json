@@ -1,6 +1,6 @@
 {
   "name": "@leaningtech/cheerp-darwin-x64",
-  "version": "3.0.0-rc.1",
+  "version": "0.0.0-1692034395",
   "license": "Apache-2.0 WITH LLVM-exception",
   "main": "index.mjs",
   "types": "index.d.ts",
@@ -12,7 +12,6 @@
     "arm64"
   ],
   "scripts": {
-    "build": "node download.mjs",
-    "prepublish": "npm run build"
+    "postinstall": "node postinstall.mjs"
   }
 }
