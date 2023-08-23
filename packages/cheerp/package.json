@@ -1,6 +1,6 @@
 {
   "name": "cheerp",
-  "version": "0.0.0-1692034395",
+  "version": "3.0.0-rc.2",
   "bin": "bin/cheerp.mjs",
   "main": "index.mjs",
   "types": "index.d.ts",
@@ -32,6 +32,7 @@
     "execa": "^7.2.0"
   },
   "optionalDependencies": {
-    "@leaningtech/cheerp-darwin-x64": "^0.0.0-1692034395"
+    "@leaningtech/cheerp-darwin-x64": "^3.0.0-rc.2",
+    "@leaningtech/cheerp-win32-x64": "^3.0.0-rc.2"
   }
 }

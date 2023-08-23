@@ -1,24 +1,11 @@
-import { $ } from "execa";
-import { writeFile, stat, constants } from "fs/promises";
+import { brotliDecompress } from "zlib";
+import { promisify } from "util";
+import { readFile, rmdir } from "fs/promises";
+import { Readable } from "stream";
+import { extract } from "tar-fs";
 
-const dest = ".";
-const url =
-  "https://output.circle-artifacts.com/output/job/38375ec3-45be-4ac9-8662-8f2c777ab578/artifacts/0/~/project/packages/cheerp-macosx-1692034395.tar.bz2";
-const tarPath = "cheerp.tar.bz2";
+rmdir("cheerp", { recursive: true }).catch(() => {});
 
-await $`rm -rf cheerp`
-
-console.log(`downloading ${url}`)
-const response = await fetch(url);
-await writeFile(tarPath, new Uint8Array(await response.arrayBuffer()));
-
-console.log(`extracting ${tarPath}`)
-await $`tar -xjf ${tarPath} -C ${dest}`;
-
-// Check that the binary is executable
-const { mode } = await stat(`cheerp/bin/clang++`)
-if (mode & constants.S_IXUSR) {
-  console.log("clang++ ok!")
-} else {
-  process.exit(1)
-}
+let buffer = await readFile("cheerp.tar.br");
+buffer = await promisify(brotliDecompress)(buffer);
+await new Promise(resolve => Readable.from(buffer).pipe(extract(".")).once("close", resolve));
