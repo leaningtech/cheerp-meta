@@ -1,8 +1,8 @@
 {
   "name": "@leaningtech/cheerp-win32-x64",
-  "version": "3.0.0-rc.2",
+  "version": "3.0.0-rc.3",
   "license": "Apache-2.0 WITH LLVM-exception",
-  "main": "index.mjs",
+  "main": "index.js",
   "types": "index.d.ts",
   "os": [
     "win32"

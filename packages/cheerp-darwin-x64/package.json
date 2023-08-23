@@ -1,6 +1,6 @@
 {
   "name": "@leaningtech/cheerp-darwin-x64",
-  "version": "3.0.0-rc.2",
+  "version": "3.0.0-rc.3",
   "license": "Apache-2.0 WITH LLVM-exception",
   "main": "index.mjs",
   "types": "index.d.ts",
