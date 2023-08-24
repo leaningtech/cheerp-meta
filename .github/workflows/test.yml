@@ -13,7 +13,7 @@ jobs:
         node-version:
           - 18.x # LTS
           - latest 
-        os: [macos-latest, windows-latest]
+        os: [macos-latest, windows-latest, ubuntu-latest]
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install --global cheerp
-      - run: npx cheerp test/hello.cpp -o test/hello.js
+      - run: npx cheerp clang++ test/hello.cpp -o test/hello.js
       - run: node test/hello.js > test/hello.out
       - run: diff test/hello.out test/hello.expected
