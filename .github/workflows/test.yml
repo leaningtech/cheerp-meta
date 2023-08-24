@@ -1,6 +1,9 @@
-name: Test
+name: Test npm package
 
-on: [push]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
 
 jobs:
   compile_works:
@@ -8,9 +11,8 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 14.8.x # top-level await unflagged
           - 18.x # LTS
-          - latest # latest 
+          - latest 
         os: [macos-latest, windows-latest]
       fail-fast: false
     runs-on: ${{ matrix.os }}
@@ -20,7 +22,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install -f # -f needed due to optionalDependencies not working w/ workspaces
       - run: npx cheerp test/hello.cpp -o test/hello.js
       - run: node test/hello.js > test/hello.out
       - run: diff test/hello.out test/hello.expected
