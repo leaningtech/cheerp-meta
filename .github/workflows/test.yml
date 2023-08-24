@@ -1,0 +1,27 @@
+name: Test npm package
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  compile_works:
+    name: Compilation works
+    strategy:
+      matrix:
+        node-version:
+          - 18.x # LTS
+          - latest 
+        os: [macos-latest, windows-latest]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npx cheerp test/hello.cpp -o test/hello.js
+      - run: node test/hello.js > test/hello.out
+      - run: diff test/hello.out test/hello.expected

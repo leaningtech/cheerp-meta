@@ -1,0 +1,19 @@
+{
+  "name": "@leaningtech/cheerp-linux-x64",
+  "version": "3.0.0-rc.5",
+  "license": "Apache-2.0 WITH LLVM-exception",
+  "main": "index.mjs",
+  "types": "index.d.ts",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "scripts": {
+    "postinstall": "node postinstall.mjs"
+  },
+  "dependencies": {
+    "tar-fs": "^3.0.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "cheerp-meta",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
