@@ -15,9 +15,15 @@ async function importCheerp() {
     if (error?.code !== "ERR_MODULE_NOT_FOUND") {
       throw error;
     }
-    return {
-      path: platform === "win32" ? "C:\\cheerp\\" : "/opt/cheerp/",
-    };
+
+    // Fall back to manual installation, if it exists
+    if (platform === "win32") {
+      return { path: "C:\\cheerp\\" };
+    } else if (platform === "darwin") {
+      return { path: "/Applications/cheerp/" };
+    } else {
+      return { path: "/opt/cheerp/" };
+    }
   }
 }
 
