@@ -1,12 +1,16 @@
-name: Install tests
+name: Test
 
 on: [push]
 
 jobs:
-  macos:
+  compile_works:
+    name: Compilation works
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x, 20.x]
+        node-version:
+          - 14.8.x # top-level await unflagged
+          - 18.x # LTS
+          - latest # latest 
         os: [macos-latest, windows-latest]
       fail-fast: false
     runs-on: ${{ matrix.os }}
@@ -16,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install -f
+      - run: npm install -f # -f needed due to optionalDependencies not working w/ workspaces
       - run: npx cheerp test/hello.cpp -o test/hello.js
       - run: node test/hello.js > test/hello.out
       - run: diff test/hello.out test/hello.expected
