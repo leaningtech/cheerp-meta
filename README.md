@@ -6,10 +6,6 @@
 
 Cheerp is an open-source, permissively licensed, enterprise-grade C/C++ compiler for Web applications. It compiles virtually any C/C++ code to WebAssembly and JavaScript.
 
-```bash
-$ npx cheerp
-```
-
 [Documentation](https://labs.leaningtech.com/cheerp)  
 [Issues](https://github.com/leaningtech/cheerp-meta/issues)  
 [Discord server](https://discord.leaningtech.com)  
