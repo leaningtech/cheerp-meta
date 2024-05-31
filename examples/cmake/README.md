@@ -1,4 +1,4 @@
-# Minimal Cheerp CMake example
+# Cheerp + CMake
 
 [![Discord server](https://img.shields.io/discord/988743885121548329?color=%237289DA&logo=discord&logoColor=ffffff)](https://discord.gg/3UfTSbWdYy)
 
