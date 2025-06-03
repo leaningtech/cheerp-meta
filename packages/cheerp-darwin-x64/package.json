@@ -15,6 +15,6 @@
     "postinstall": "node postinstall.mjs"
   },
   "dependencies": {
-    "tar-fs": "^3.0.7"
+    "tar-fs": "^3.0.9"
   }
 }
